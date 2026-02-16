@@ -1,0 +1,61 @@
+meta {
+  name: /api/mms/Samples/SaveSampleRemarks
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Samples/SaveSampleRemarks
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "sampleId": 3832,
+    "description": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Samples/SaveSampleRemarks
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "sampleId": 3832,
+        "description": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

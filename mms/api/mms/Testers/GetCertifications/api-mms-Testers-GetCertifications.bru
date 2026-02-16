@@ -1,0 +1,51 @@
+meta {
+  name: /api/mms/Testers/GetCertifications
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Testers/GetCertifications?searchText=test certification
+  body: none
+  auth: inherit
+}
+
+params:query {
+  searchText: test certification
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Testers/GetCertifications?searchText=string
+    method: GET
+    mode: none
+    params:query: {
+      searchText: string
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

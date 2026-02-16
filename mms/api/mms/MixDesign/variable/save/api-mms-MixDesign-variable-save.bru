@@ -1,0 +1,79 @@
+meta {
+  name: /api/mms/MixDesign/variable/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/variable/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtMixDesignVariableId": 9716,
+    "mtMixDesignId": 8066,
+    "batchVariableCd": 1584,
+    "testValue": "string",
+    "mtSurveyId": 6324,
+    "mtSurveyQuestionId": 5773,
+    "mtSampleId": 6520,
+    "retrieveTestValueInd": true,
+    "attachedTestValueInd": true,
+    "requiredInd": true,
+    "isEditable": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/variable/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtMixDesignVariableId": 9716,
+        "mtMixDesignId": 8066,
+        "batchVariableCd": 1584,
+        "testValue": "string",
+        "mtSurveyId": 6324,
+        "mtSurveyQuestionId": 5773,
+        "mtSampleId": 6520,
+        "retrieveTestValueInd": true,
+        "attachedTestValueInd": true,
+        "requiredInd": true,
+        "isEditable": false
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

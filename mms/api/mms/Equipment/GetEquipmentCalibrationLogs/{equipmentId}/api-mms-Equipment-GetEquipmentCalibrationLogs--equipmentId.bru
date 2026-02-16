@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Equipment/GetEquipmentCalibrationLogs/:equipmentId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Equipment/GetEquipmentCalibrationLogs/:equipmentId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  equipmentId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/GetEquipmentCalibrationLogs/:equipmentId
+    method: GET
+    mode: none
+    params:path: {
+      equipmentId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

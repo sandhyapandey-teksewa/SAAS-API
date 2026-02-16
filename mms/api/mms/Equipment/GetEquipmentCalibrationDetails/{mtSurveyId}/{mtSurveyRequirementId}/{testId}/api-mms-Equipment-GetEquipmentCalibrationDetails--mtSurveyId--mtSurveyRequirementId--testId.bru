@@ -1,0 +1,54 @@
+meta {
+  name: /api/mms/Equipment/GetEquipmentCalibrationDetails/:mtSurveyId/:mtSurveyRequirementId/:testId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Equipment/GetEquipmentCalibrationDetails/:mtSurveyId/:mtSurveyRequirementId/:testId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtSurveyId: 698
+  mtSurveyRequirementId: 698
+  testId: 0
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/GetEquipmentCalibrationDetails/:mtSurveyId/:mtSurveyRequirementId/:testId
+    method: GET
+    mode: none
+    params:path: {
+      mtSurveyId: 698
+      mtSurveyRequirementId: 698
+      testId: 0
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

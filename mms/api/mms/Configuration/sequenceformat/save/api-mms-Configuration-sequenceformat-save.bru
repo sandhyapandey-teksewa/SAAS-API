@@ -1,0 +1,111 @@
+meta {
+  name: /api/mms/Configuration/sequenceformat/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Configuration/sequenceformat/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "sequenceFormatId": 3987,
+    "sequenceName": "string",
+    "isActive": false,
+    "isUsed": true,
+    "startingSequenceValue": "string",
+    "createdBy": "string",
+    "createDate": "2010-11-19T06:44:25.852Z",
+    "lastUpdateDate": "1953-04-19T10:41:45.070Z",
+    "lastUpdateBy": "string",
+    "sequenceFormatRules": [
+      {
+        "sequenceFormatRuleId": 7307,
+        "ruleOrder": 7298,
+        "typeCd": 955,
+        "type": "string",
+        "value": "string",
+        "resetTriggerId": 1418
+      },
+      {
+        "sequenceFormatRuleId": 6081,
+        "ruleOrder": 553,
+        "typeCd": 228,
+        "type": "string",
+        "value": "string",
+        "resetTriggerId": 5906
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Configuration/sequenceformat/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "sequenceFormatId": 3987,
+        "sequenceName": "string",
+        "isActive": false,
+        "isUsed": true,
+        "startingSequenceValue": "string",
+        "createdBy": "string",
+        "createDate": "2010-11-19T06:44:25.852Z",
+        "lastUpdateDate": "1953-04-19T10:41:45.070Z",
+        "lastUpdateBy": "string",
+        "sequenceFormatRules": [
+          {
+            "sequenceFormatRuleId": 7307,
+            "ruleOrder": 7298,
+            "typeCd": 955,
+            "type": "string",
+            "value": "string",
+            "resetTriggerId": 1418
+          },
+          {
+            "sequenceFormatRuleId": 6081,
+            "ruleOrder": 553,
+            "typeCd": 228,
+            "type": "string",
+            "value": "string",
+            "resetTriggerId": 5906
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

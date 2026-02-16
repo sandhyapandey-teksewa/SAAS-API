@@ -1,0 +1,81 @@
+meta {
+  name: /api/mms/Samples/CalculateExcelformula
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Samples/CalculateExcelformula
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "result": "string",
+    "calculationVariable": [
+      {
+        "variablename": "string",
+        "value": 11.840216259153546
+      },
+      {
+        "variablename": "string",
+        "value": 7268.253182962112
+      }
+    ],
+    "formula": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Samples/CalculateExcelformula
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "result": "string",
+        "calculationVariable": [
+          {
+            "variablename": "string",
+            "value": 11.840216259153546
+          },
+          {
+            "variablename": "string",
+            "value": 7268.253182962112
+          }
+        ],
+        "formula": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

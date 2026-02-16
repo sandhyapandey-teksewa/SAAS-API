@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Tests/QuestionResponse/:DependentQuestionId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Tests/QuestionResponse/:DependentQuestionId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  DependentQuestionId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/QuestionResponse/:DependentQuestionId
+    method: GET
+    mode: none
+    params:path: {
+      DependentQuestionId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

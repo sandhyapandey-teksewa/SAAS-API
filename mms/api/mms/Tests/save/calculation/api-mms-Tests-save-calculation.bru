@@ -1,0 +1,133 @@
+meta {
+  name: /api/mms/Tests/save/calculation
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/save/calculation
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtSurveyCalculationId": 823,
+    "mtSurveyGroupId": 6474,
+    "mtSurveyId": 9394,
+    "mtMixDesignId": 1930,
+    "name": "string",
+    "description": "string",
+    "calculation": "string",
+    "testQuestions": [
+      {
+        "mtSurveyQuestionId": 4396,
+        "mtSurveyGroupId": 5504,
+        "name": "string",
+        "questionType": "string",
+        "question": "string",
+        "variableId": "string"
+      },
+      {
+        "mtSurveyQuestionId": 2413,
+        "mtSurveyGroupId": 4777,
+        "name": "string",
+        "questionType": "string",
+        "question": "string",
+        "variableId": "string"
+      }
+    ],
+    "mixDesignVariables": [
+      {
+        "mtMixDesignId": 3539,
+        "name": "string",
+        "variableId": "string"
+      },
+      {
+        "mtMixDesignId": 5987,
+        "name": "string",
+        "variableId": "string"
+      }
+    ],
+    "isEditable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/save/calculation
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtSurveyCalculationId": 823,
+        "mtSurveyGroupId": 6474,
+        "mtSurveyId": 9394,
+        "mtMixDesignId": 1930,
+        "name": "string",
+        "description": "string",
+        "calculation": "string",
+        "testQuestions": [
+          {
+            "mtSurveyQuestionId": 4396,
+            "mtSurveyGroupId": 5504,
+            "name": "string",
+            "questionType": "string",
+            "question": "string",
+            "variableId": "string"
+          },
+          {
+            "mtSurveyQuestionId": 2413,
+            "mtSurveyGroupId": 4777,
+            "name": "string",
+            "questionType": "string",
+            "question": "string",
+            "variableId": "string"
+          }
+        ],
+        "mixDesignVariables": [
+          {
+            "mtMixDesignId": 3539,
+            "name": "string",
+            "variableId": "string"
+          },
+          {
+            "mtMixDesignId": 5987,
+            "name": "string",
+            "variableId": "string"
+          }
+        ],
+        "isEditable": true
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

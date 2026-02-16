@@ -1,0 +1,99 @@
+meta {
+  name: /api/mms/Product/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mmsUrl}}/api/mms/Product/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "productID": 3724201,
+      "productName": "Test product",
+      "materialID": 4620635,
+      "materialCode": "87666",
+      "notes": "hello from postman tetsing",
+      "manufacturerID": 12,
+      "distributorID": 124,
+      "listTypeIDs": [],
+      "activeRanges": [
+        {
+          "activeRangeID": 3724204,
+          "activeDate": "2026-01-21T00:00:00",
+          "expirationDate": "2026-12-25T00:00:00",
+          "comments": "For construction"
+        }
+      ]
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Product/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "productID": 3771,
+        "productName": "string",
+        "materialID": 3225,
+        "materialCode": "string",
+        "notes": "string",
+        "manufacturerID": 2309,
+        "distributorID": 4984,
+        "listTypeIDs": [
+          7099,
+          7620
+        ],
+        "activeRanges": [
+          {
+            "activeRangeID": 9536,
+            "activeDate": "1995-04-25T05:30:08.631Z",
+            "expirationDate": "1947-09-27T14:36:09.374Z",
+            "comments": "string"
+          },
+          {
+            "activeRangeID": 2496,
+            "activeDate": "1975-02-26T22:42:41.558Z",
+            "expirationDate": "1989-11-08T02:17:43.120Z",
+            "comments": "string"
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

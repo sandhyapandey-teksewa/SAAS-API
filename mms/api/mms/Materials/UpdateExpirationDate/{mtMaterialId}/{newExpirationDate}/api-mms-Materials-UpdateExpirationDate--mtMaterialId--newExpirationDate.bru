@@ -1,0 +1,52 @@
+meta {
+  name: /api/mms/Materials/UpdateExpirationDate/:mtMaterialId/:newExpirationDate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Materials/UpdateExpirationDate/:mtMaterialId/:newExpirationDate
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtMaterialId: 698
+  newExpirationDate: 1984-02-10T06:49:11.590Z
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/UpdateExpirationDate/:mtMaterialId/:newExpirationDate
+    method: POST
+    mode: none
+    params:path: {
+      mtMaterialId: 698
+      newExpirationDate: 1984-02-10T06:49:11.590Z
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

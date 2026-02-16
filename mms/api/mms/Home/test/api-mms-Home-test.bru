@@ -1,0 +1,42 @@
+meta {
+  name: /api/mms/Home/test
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Home/test
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Home/test
+    method: GET
+    mode: none
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,42 @@
+meta {
+  name: /api/mms/Facility/GetTestersDropdown
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Facility/GetTestersDropdown
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Facility/GetTestersDropdown
+    method: GET
+    mode: none
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

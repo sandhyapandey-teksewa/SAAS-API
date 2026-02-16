@@ -1,0 +1,43 @@
+meta {
+  name: /api/auth/Account/configuration
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseurl}}/api/auth/Account/configuration
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/configuration
+    method: GET
+    mode: none
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

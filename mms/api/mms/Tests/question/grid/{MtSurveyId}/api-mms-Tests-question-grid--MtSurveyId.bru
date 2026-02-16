@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Tests/question/grid/:MtSurveyId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Tests/question/grid/:MtSurveyId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  MtSurveyId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/question/grid/:MtSurveyId
+    method: GET
+    mode: none
+    params:path: {
+      MtSurveyId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

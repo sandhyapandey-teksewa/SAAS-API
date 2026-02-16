@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Materials/CheckMaterialVersionExists/:mtMaterialId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/CheckMaterialVersionExists/:mtMaterialId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtMaterialId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/CheckMaterialVersionExists/:mtMaterialId
+    method: GET
+    mode: none
+    params:path: {
+      mtMaterialId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

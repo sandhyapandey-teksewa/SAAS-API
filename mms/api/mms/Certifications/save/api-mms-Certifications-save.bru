@@ -1,0 +1,75 @@
+meta {
+  name: /api/mms/Certifications/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mmsUrl}}/api/mms/Certifications/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtCertificationId": 3722665,
+    "certificationName": "Sp certification",
+    "description": "Testing Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "authority": "",
+    "expirationMonths": 7,
+    "surveyTypeIDs": [],
+    "comments": "Added comment"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Certifications/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtCertificationId": 1758,
+        "certificationName": "string",
+        "description": "string",
+        "authority": "string",
+        "expirationMonths": 8446,
+        "surveyTypeIDs": [
+          2760,
+          1451
+        ],
+        "comments": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

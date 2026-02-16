@@ -1,0 +1,55 @@
+meta {
+  name: /api/auth/Account/SetSaveAsYouGoIndex
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/auth/Account/SetSaveAsYouGoIndex
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  enable: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/SetSaveAsYouGoIndex
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      enable: false
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

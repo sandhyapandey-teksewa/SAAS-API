@@ -1,0 +1,82 @@
+meta {
+  name: /api/auth/Account
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseurl}}/api/auth/Account
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "UserName": "punam",
+    "Password": "Saas@123"
+  }
+}
+
+script:post-response {
+  test("Status code is 200", function () {
+      expect(res.getStatus()).to.equal(200);
+  });
+  
+  var jsonData = res.getBody();
+  
+  // Save token to global variable
+  if (jsonData.Data && jsonData.Data.JwtToken) {
+      bru.setGlobalEnvVar("bearerToken", jsonData.Data.JwtToken);
+      console.log("Token saved successfully");
+  } else {
+      console.log("Token not found in response");
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "UserName": "string",
+        "Password": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,75 @@
+meta {
+  name: /api/mms/MixDesign/attribute/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/attribute/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtMixDesignPropertyId": 1759,
+    "mtMixDesignId": 4777,
+    "name": "string",
+    "value": "string",
+    "printInd": true,
+    "valueSourceCd": 8381,
+    "valueSourceListCd": 9114,
+    "valueCd": 9624,
+    "isEditable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/attribute/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtMixDesignPropertyId": 1759,
+        "mtMixDesignId": 4777,
+        "name": "string",
+        "value": "string",
+        "printInd": true,
+        "valueSourceCd": 8381,
+        "valueSourceListCd": 9114,
+        "valueCd": 9624,
+        "isEditable": true
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

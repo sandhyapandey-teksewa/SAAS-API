@@ -1,0 +1,52 @@
+meta {
+  name: /api/mms/Equipment/GetTestDetails/:mtSurveyId/:mtTestId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Equipment/GetTestDetails/:mtSurveyId/:mtTestId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtSurveyId: 698
+  mtTestId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/GetTestDetails/:mtSurveyId/:mtTestId
+    method: GET
+    mode: none
+    params:path: {
+      mtSurveyId: 698
+      mtTestId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

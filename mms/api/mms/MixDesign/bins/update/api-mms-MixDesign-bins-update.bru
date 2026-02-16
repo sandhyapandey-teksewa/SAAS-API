@@ -1,0 +1,139 @@
+meta {
+  name: /api/mms/MixDesign/bins/update
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/bins/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtMixDesignId": 2503,
+    "bins": [
+      {
+        "mtTestId": 7982,
+        "designSampleId": 3542,
+        "binName": "string",
+        "testResponses": [
+          {
+            "mtSurveyQuestionId": 5213,
+            "mtTestId": 2933,
+            "response": "string",
+            "responseId": 1132
+          },
+          {
+            "mtSurveyQuestionId": 1621,
+            "mtTestId": 3219,
+            "response": "string",
+            "responseId": 7048
+          }
+        ]
+      },
+      {
+        "mtTestId": 2279,
+        "designSampleId": 4524,
+        "binName": "string",
+        "testResponses": [
+          {
+            "mtSurveyQuestionId": 2045,
+            "mtTestId": 5802,
+            "response": "string",
+            "responseId": 7587
+          },
+          {
+            "mtSurveyQuestionId": 9015,
+            "mtTestId": 5231,
+            "response": "string",
+            "responseId": 5200
+          }
+        ]
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/bins/update
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtMixDesignId": 2503,
+        "bins": [
+          {
+            "mtTestId": 7982,
+            "designSampleId": 3542,
+            "binName": "string",
+            "testResponses": [
+              {
+                "mtSurveyQuestionId": 5213,
+                "mtTestId": 2933,
+                "response": "string",
+                "responseId": 1132
+              },
+              {
+                "mtSurveyQuestionId": 1621,
+                "mtTestId": 3219,
+                "response": "string",
+                "responseId": 7048
+              }
+            ]
+          },
+          {
+            "mtTestId": 2279,
+            "designSampleId": 4524,
+            "binName": "string",
+            "testResponses": [
+              {
+                "mtSurveyQuestionId": 2045,
+                "mtTestId": 5802,
+                "response": "string",
+                "responseId": 7587
+              },
+              {
+                "mtSurveyQuestionId": 9015,
+                "mtTestId": 5231,
+                "response": "string",
+                "responseId": 5200
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

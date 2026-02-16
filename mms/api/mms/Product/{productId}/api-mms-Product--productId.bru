@@ -1,0 +1,55 @@
+meta {
+  name: /api/mms/Product/:productId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Product/:productId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  productId: 3724201
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Product/:productId
+    method: GET
+    mode: none
+    params:path: {
+      productId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

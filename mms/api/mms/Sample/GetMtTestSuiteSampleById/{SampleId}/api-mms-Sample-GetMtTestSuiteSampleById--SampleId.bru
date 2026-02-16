@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Sample/GetMtTestSuiteSampleById/:SampleId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Sample/GetMtTestSuiteSampleById/:SampleId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  SampleId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Sample/GetMtTestSuiteSampleById/:SampleId
+    method: GET
+    mode: none
+    params:path: {
+      SampleId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

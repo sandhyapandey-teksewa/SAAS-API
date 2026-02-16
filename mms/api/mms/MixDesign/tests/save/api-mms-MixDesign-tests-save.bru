@@ -1,0 +1,73 @@
+meta {
+  name: /api/mms/MixDesign/tests/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/tests/save
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  MtMixDesignId: 7263
+  MtSurveyRequirementId: 8637
+  MtSurveyId: 9456
+  Comments: string
+  TestFrequencyCd: 6474
+  TestFrequencyUomCd: 3180
+  FrequencyAmount: 3818.5921432142745
+  RequiredInd: true
+  IsEditable: true
+  QuestionAndResponses: [object Object],[object Object]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/tests/save
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      MtMixDesignId: 7263
+      MtSurveyRequirementId: 8637
+      MtSurveyId: 9456
+      Comments: string
+      TestFrequencyCd: 6474
+      TestFrequencyUomCd: 3180
+      FrequencyAmount: 3818.5921432142745
+      RequiredInd: true
+      IsEditable: true
+      QuestionAndResponses: [object Object],[object Object]
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

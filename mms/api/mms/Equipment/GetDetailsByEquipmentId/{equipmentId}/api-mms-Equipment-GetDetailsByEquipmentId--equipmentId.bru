@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Equipment/GetDetailsByEquipmentId/:equipmentId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Equipment/GetDetailsByEquipmentId/:equipmentId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  equipmentId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/GetDetailsByEquipmentId/:equipmentId
+    method: GET
+    mode: none
+    params:path: {
+      equipmentId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

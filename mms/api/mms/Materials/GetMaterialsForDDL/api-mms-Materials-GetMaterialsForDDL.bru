@@ -1,0 +1,54 @@
+meta {
+  name: /api/mms/Materials/GetMaterialsForDDL
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/GetMaterialsForDDL?searchText=&searchId=0&isActive=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  searchText: 
+  searchId: 0
+  isActive: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/GetMaterialsForDDL?searchText=&searchId=0&isActive=false
+    method: GET
+    mode: none
+    params:query: {
+      searchText: 
+      searchId: 0
+      isActive: false
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

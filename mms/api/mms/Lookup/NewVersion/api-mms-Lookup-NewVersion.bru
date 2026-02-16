@@ -1,0 +1,85 @@
+meta {
+  name: /api/mms/Lookup/NewVersion
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Lookup/NewVersion
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  MtLookupId: 4067
+  Name: string
+  EffectiveDate: 1969-09-13T19:39:59.247Z
+  ExpirationDate: 2003-05-10T02:29:12.439Z
+  ValueDataTypeCd: 1051
+  ValueDataType: string
+  ValueQuestionText: string
+  ParentLookupId: 5863
+  ValueName: string
+  ExportData: string
+  ImportReferenceId: 3497
+  MtLookupKeys: [object Object],[object Object]
+  LookupVersionNumber: 6026
+  IsLatestVersion: false
+  IsEditable: false
+  VersionInformation: string
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Lookup/NewVersion
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      MtLookupId: 4067
+      Name: string
+      EffectiveDate: 1969-09-13T19:39:59.247Z
+      ExpirationDate: 2003-05-10T02:29:12.439Z
+      ValueDataTypeCd: 1051
+      ValueDataType: string
+      ValueQuestionText: string
+      ParentLookupId: 5863
+      ValueName: string
+      ExportData: string
+      ImportReferenceId: 3497
+      MtLookupKeys: [object Object],[object Object]
+      LookupVersionNumber: 6026
+      IsLatestVersion: false
+      IsEditable: false
+      VersionInformation: string
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

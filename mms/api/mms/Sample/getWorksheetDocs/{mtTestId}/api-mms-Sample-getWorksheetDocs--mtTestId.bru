@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Sample/getWorksheetDocs/:mtTestId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Sample/getWorksheetDocs/:mtTestId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtTestId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Sample/getWorksheetDocs/:mtTestId
+    method: GET
+    mode: none
+    params:path: {
+      mtTestId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

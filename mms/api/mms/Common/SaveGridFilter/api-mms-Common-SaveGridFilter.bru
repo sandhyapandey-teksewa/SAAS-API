@@ -1,0 +1,81 @@
+meta {
+  name: /api/mms/Common/SaveGridFilter
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Common/SaveGridFilter
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "createdBy": "string",
+    "createDate": "1977-01-19T15:27:29.397Z",
+    "lastUpdateDate": "1999-12-04T02:40:20.062Z",
+    "lastUpdateBy": "string",
+    "versionNumber": 1760,
+    "smGridStateFilterId": 9151,
+    "name": "string",
+    "smPersonId": 9625,
+    "gridKey": "string",
+    "serializedGridSettings": "string",
+    "mobileGridSettings": "string",
+    "mode": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Common/SaveGridFilter
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "createdBy": "string",
+        "createDate": "1977-01-19T15:27:29.397Z",
+        "lastUpdateDate": "1999-12-04T02:40:20.062Z",
+        "lastUpdateBy": "string",
+        "versionNumber": 1760,
+        "smGridStateFilterId": 9151,
+        "name": "string",
+        "smPersonId": 9625,
+        "gridKey": "string",
+        "serializedGridSettings": "string",
+        "mobileGridSettings": "string",
+        "mode": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

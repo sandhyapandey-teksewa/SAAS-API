@@ -1,0 +1,56 @@
+meta {
+  name: /api/mms/MixDesign/loadexecutetestdata/:surveyType/:SurveyId/:mixDesignId/:surveyRequirementId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/MixDesign/loadexecutetestdata/:surveyType/:SurveyId/:mixDesignId/:surveyRequirementId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  surveyType: string
+  SurveyId: 698
+  mixDesignId: 698
+  surveyRequirementId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/loadexecutetestdata/:surveyType/:SurveyId/:mixDesignId/:surveyRequirementId
+    method: GET
+    mode: none
+    params:path: {
+      surveyType: string
+      SurveyId: 698
+      mixDesignId: 698
+      surveyRequirementId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

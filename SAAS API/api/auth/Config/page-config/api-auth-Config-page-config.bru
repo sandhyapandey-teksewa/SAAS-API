@@ -1,0 +1,52 @@
+meta {
+  name: /api/auth/Config/page-config
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/auth/Config/page-config?name=string&companyDomainId=4524
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: string
+  companyDomainId: 4524
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Config/page-config?name=string&companyDomainId=4524
+    method: GET
+    mode: none
+    params:query: {
+      name: string
+      companyDomainId: 4524
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

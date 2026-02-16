@@ -1,0 +1,19 @@
+meta {
+  name: mms
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+vars:pre-request {
+  baseUrl: /
+}
+
+docs {
+  MMS API
+}

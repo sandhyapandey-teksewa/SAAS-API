@@ -1,0 +1,42 @@
+meta {
+  name: /api/mms/Equipment/GetMaintenanceForDropdown
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Equipment/GetMaintenanceForDropdown
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/GetMaintenanceForDropdown
+    method: GET
+    mode: none
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

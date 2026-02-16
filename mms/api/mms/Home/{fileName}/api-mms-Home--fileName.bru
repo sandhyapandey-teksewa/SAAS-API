@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Home/:fileName
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Home/:fileName
+  body: none
+  auth: inherit
+}
+
+params:path {
+  fileName: string
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Home/:fileName
+    method: GET
+    mode: none
+    params:path: {
+      fileName: string
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

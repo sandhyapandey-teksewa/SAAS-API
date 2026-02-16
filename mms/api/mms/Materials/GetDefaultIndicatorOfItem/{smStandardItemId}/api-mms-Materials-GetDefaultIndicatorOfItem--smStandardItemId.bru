@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Materials/GetDefaultIndicatorOfItem/:smStandardItemId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/GetDefaultIndicatorOfItem/:smStandardItemId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  smStandardItemId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/GetDefaultIndicatorOfItem/:smStandardItemId
+    method: GET
+    mode: none
+    params:path: {
+      smStandardItemId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

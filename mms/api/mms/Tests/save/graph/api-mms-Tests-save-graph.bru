@@ -1,0 +1,167 @@
+meta {
+  name: /api/mms/Tests/save/graph
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/save/graph
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtGraphId": 7995,
+    "mtSurveyId": 1619,
+    "title": "string",
+    "notes": "string",
+    "axis1Label": "string",
+    "axis2Label": "string",
+    "axis1Minimum": 8548.244675532485,
+    "axis1Maximum": 5937.235248846049,
+    "axis2Minimum": 5184.691326680728,
+    "axis2Maximum": 1572.7679970553977,
+    "axis1DatapointIncludeInd": true,
+    "axis2DatapointIncludeInd": true,
+    "polynomialCount": 8124,
+    "axis1DataTypeCd": 122,
+    "axis2DataTypeCd": 7044,
+    "connectDatapointInd": true,
+    "trendlineTypeCd": 2747,
+    "zeroDatasetExcludeTypeCd": 3749,
+    "graphSeries": [
+      {
+        "mtGraphSeriesId": 2405,
+        "mtGraphId": 6058,
+        "seriesName": "string",
+        "mtGraphAxisId1": 8085,
+        "mtGraphAxisId2": 6419,
+        "useAxis1ValueInd": true,
+        "useAxis2ValueInd": false,
+        "selectedAxis1QuestionIds": [
+          8908,
+          9962
+        ],
+        "selectedAxis2QuestionIds": [
+          8995,
+          2634
+        ]
+      },
+      {
+        "mtGraphSeriesId": 1602,
+        "mtGraphId": 4492,
+        "seriesName": "string",
+        "mtGraphAxisId1": 623,
+        "mtGraphAxisId2": 7742,
+        "useAxis1ValueInd": true,
+        "useAxis2ValueInd": true,
+        "selectedAxis1QuestionIds": [
+          4512,
+          3775
+        ],
+        "selectedAxis2QuestionIds": [
+          7008,
+          9691
+        ]
+      }
+    ],
+    "isEditable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/save/graph
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtGraphId": 7995,
+        "mtSurveyId": 1619,
+        "title": "string",
+        "notes": "string",
+        "axis1Label": "string",
+        "axis2Label": "string",
+        "axis1Minimum": 8548.244675532485,
+        "axis1Maximum": 5937.235248846049,
+        "axis2Minimum": 5184.691326680728,
+        "axis2Maximum": 1572.7679970553977,
+        "axis1DatapointIncludeInd": true,
+        "axis2DatapointIncludeInd": true,
+        "polynomialCount": 8124,
+        "axis1DataTypeCd": 122,
+        "axis2DataTypeCd": 7044,
+        "connectDatapointInd": true,
+        "trendlineTypeCd": 2747,
+        "zeroDatasetExcludeTypeCd": 3749,
+        "graphSeries": [
+          {
+            "mtGraphSeriesId": 2405,
+            "mtGraphId": 6058,
+            "seriesName": "string",
+            "mtGraphAxisId1": 8085,
+            "mtGraphAxisId2": 6419,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": false,
+            "selectedAxis1QuestionIds": [
+              8908,
+              9962
+            ],
+            "selectedAxis2QuestionIds": [
+              8995,
+              2634
+            ]
+          },
+          {
+            "mtGraphSeriesId": 1602,
+            "mtGraphId": 4492,
+            "seriesName": "string",
+            "mtGraphAxisId1": 623,
+            "mtGraphAxisId2": 7742,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": true,
+            "selectedAxis1QuestionIds": [
+              4512,
+              3775
+            ],
+            "selectedAxis2QuestionIds": [
+              7008,
+              9691
+            ]
+          }
+        ],
+        "isEditable": true
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

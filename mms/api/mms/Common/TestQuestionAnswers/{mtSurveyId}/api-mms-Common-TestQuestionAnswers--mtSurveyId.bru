@@ -1,0 +1,60 @@
+meta {
+  name: /api/mms/Common/TestQuestionAnswers/:mtSurveyId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Common/TestQuestionAnswers/:mtSurveyId?TestId=0&mtSurveryRequirementId=0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  TestId: 0
+  mtSurveryRequirementId: 0
+}
+
+params:path {
+  mtSurveyId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Common/TestQuestionAnswers/:mtSurveyId?TestId=0&mtSurveryRequirementId=0
+    method: GET
+    mode: none
+    params:query: {
+      TestId: 0
+      mtSurveryRequirementId: 0
+    }
+  
+    params:path: {
+      mtSurveyId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

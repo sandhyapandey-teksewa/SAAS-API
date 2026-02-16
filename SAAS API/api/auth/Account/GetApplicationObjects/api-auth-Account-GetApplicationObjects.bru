@@ -1,0 +1,47 @@
+meta {
+  name: /api/auth/Account/GetApplicationObjects
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseurl}}/api/auth/Account/GetApplicationObjects
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/GetApplicationObjects
+    method: GET
+    mode: none
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,75 @@
+meta {
+  name: /api/mms/Equipment/AddEquipmentCalibration
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Equipment/AddEquipmentCalibration
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  MtSurveyRequirementId: 3283
+  SmEquipmentId: 1611
+  SmFacilityId: 9332
+  MtSurveyId: 4727
+  CalibrationName: string
+  CalibrationFrequencyCd: 5762
+  CalibrationFrequencyUomCd: 2144
+  FrequencyAmount: 4830.387829084484
+  RequiredInd: true
+  Comments: string
+  QuestionAndResponses: [object Object],[object Object]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/AddEquipmentCalibration
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      MtSurveyRequirementId: 3283
+      SmEquipmentId: 1611
+      SmFacilityId: 9332
+      MtSurveyId: 4727
+      CalibrationName: string
+      CalibrationFrequencyCd: 5762
+      CalibrationFrequencyUomCd: 2144
+      FrequencyAmount: 4830.387829084484
+      RequiredInd: true
+      Comments: string
+      QuestionAndResponses: [object Object],[object Object]
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

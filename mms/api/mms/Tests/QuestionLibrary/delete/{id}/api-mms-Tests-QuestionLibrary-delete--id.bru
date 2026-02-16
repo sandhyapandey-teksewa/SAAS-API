@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Tests/QuestionLibrary/delete/:id
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/QuestionLibrary/delete/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/QuestionLibrary/delete/:id
+    method: POST
+    mode: none
+    params:path: {
+      id: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

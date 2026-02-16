@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/MixDesign/list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/MixDesign/list?activeOnly=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  activeOnly: true
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/list?activeOnly=true
+    method: GET
+    mode: none
+    params:query: {
+      activeOnly: true
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

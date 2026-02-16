@@ -1,0 +1,79 @@
+meta {
+  name: /api/mms/MixDesign/save
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtMixDesignId": 8452,
+    "name": "string",
+    "effectiveDate": "1963-04-13T06:37:48.518Z",
+    "expirationDate": "1971-09-21T16:32:19.380Z",
+    "defaultPrintInd": false,
+    "versionNumber": 9305,
+    "associatedSurveyId": 3449,
+    "templateInd": false,
+    "isEditable": true,
+    "infoMessage": "string",
+    "mtSurveyId": 2612
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtMixDesignId": 8452,
+        "name": "string",
+        "effectiveDate": "1963-04-13T06:37:48.518Z",
+        "expirationDate": "1971-09-21T16:32:19.380Z",
+        "defaultPrintInd": false,
+        "versionNumber": 9305,
+        "associatedSurveyId": 3449,
+        "templateInd": false,
+        "isEditable": true,
+        "infoMessage": "string",
+        "mtSurveyId": 2612
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

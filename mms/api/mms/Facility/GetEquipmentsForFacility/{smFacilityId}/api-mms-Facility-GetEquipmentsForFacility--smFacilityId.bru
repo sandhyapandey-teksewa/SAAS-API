@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Facility/GetEquipmentsForFacility/:smFacilityId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Facility/GetEquipmentsForFacility/:smFacilityId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  smFacilityId: 937913048
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Facility/GetEquipmentsForFacility/:smFacilityId
+    method: GET
+    mode: none
+    params:path: {
+      smFacilityId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

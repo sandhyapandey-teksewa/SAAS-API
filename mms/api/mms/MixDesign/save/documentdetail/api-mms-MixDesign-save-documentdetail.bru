@@ -1,0 +1,75 @@
+meta {
+  name: /api/mms/MixDesign/save/documentdetail
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/save/documentdetail
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtMixDesignId": 5203,
+    "smDocumentId": 2823,
+    "documentType": "string",
+    "documentTypeCd": 5220,
+    "description": "string",
+    "documentName": "string",
+    "docDownloadUrl": "string",
+    "isEditable": true,
+    "isDeletable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/save/documentdetail
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtMixDesignId": 5203,
+        "smDocumentId": 2823,
+        "documentType": "string",
+        "documentTypeCd": 5220,
+        "description": "string",
+        "documentName": "string",
+        "docDownloadUrl": "string",
+        "isEditable": true,
+        "isDeletable": true
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

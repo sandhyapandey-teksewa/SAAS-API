@@ -1,0 +1,52 @@
+meta {
+  name: /api/mms/Tests/QuestionResponseGrid/:mtSurveyQuestionId/:DependentQuestionId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Tests/QuestionResponseGrid/:mtSurveyQuestionId/:DependentQuestionId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtSurveyQuestionId: 698
+  DependentQuestionId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/QuestionResponseGrid/:mtSurveyQuestionId/:DependentQuestionId
+    method: GET
+    mode: none
+    params:path: {
+      mtSurveyQuestionId: 698
+      DependentQuestionId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

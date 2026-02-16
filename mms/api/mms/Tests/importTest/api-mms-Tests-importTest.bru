@@ -1,0 +1,947 @@
+meta {
+  name: /api/mms/Tests/importTest
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/importTest
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "string",
+    "description": "string",
+    "effectiveDate": "2000-11-14T19:13:17.707Z",
+    "expirationDate": "2018-12-08T17:10:40.782Z",
+    "testTypeCD": {
+      "value": "string",
+      "description": "string",
+      "codeTypeCd": {
+        "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+      }
+    },
+    "testMethod": "string",
+    "standardNote": "string",
+    "approvalWorkflowID": 7654,
+    "versionNumber": 2995,
+    "infoMessage": "string",
+    "surveyGroup": {
+      "name": "string",
+      "separator": "string",
+      "sequenceNumber": 3971,
+      "questions": [
+        {
+          "name": "string",
+          "question": "string",
+          "graphValue": "string",
+          "graphAxisLabel": "string",
+          "importReferenceID": 9049,
+          "enabledInd": false,
+          "propertyInd": true,
+          "requiredInd": true,
+          "resultInd": false,
+          "uom": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "hiddenInd": false,
+          "questionTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "calculation": {
+            "name": "string",
+            "description": "string",
+            "calculation": "string"
+          },
+          "listSourceCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "listValueCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "controlTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "linkedSurvey": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.TestsImportExportVM detected>"
+          },
+          "linkedSurveyQuestion": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+          },
+          "linkedSurveyInstance": 8270,
+          "lookup": {
+            "name": "string",
+            "effectiveDate": "1971-12-28T17:49:29.708Z",
+            "expirationDate": "1981-04-24T00:27:49.806Z",
+            "valueDataType": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "valueQuestionText": "string",
+            "parentLookup": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.LookupImportExportVM detected>"
+            },
+            "valueName": "string",
+            "exportData": "string"
+          },
+          "dataTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "iaTolerance": 1329.1773247878425,
+          "decimalPlaces": 2321,
+          "questionResponses": [
+            "string",
+            "string"
+          ],
+          "dependentResponses": [
+            {
+              "response": "string",
+              "name": "string"
+            },
+            {
+              "response": "string",
+              "name": "string"
+            }
+          ],
+          "copyQuestionToLibrary": false,
+          "showCopyToLibrary": false,
+          "dependentQuestion": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+          },
+          "dependentQuestions": [
+            {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+            },
+            {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+            }
+          ]
+        },
+        {
+          "name": "string",
+          "question": "string",
+          "graphValue": "string",
+          "graphAxisLabel": "string",
+          "importReferenceID": 7707,
+          "enabledInd": false,
+          "propertyInd": true,
+          "requiredInd": false,
+          "resultInd": false,
+          "uom": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "hiddenInd": true,
+          "questionTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "calculation": {
+            "name": "string",
+            "description": "string",
+            "calculation": "string"
+          },
+          "listSourceCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "listValueCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "controlTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "linkedSurvey": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.TestsImportExportVM detected>"
+          },
+          "linkedSurveyQuestion": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+          },
+          "linkedSurveyInstance": 4278,
+          "lookup": {
+            "name": "string",
+            "effectiveDate": "2019-07-19T16:45:32.638Z",
+            "expirationDate": "1949-03-22T03:41:38.841Z",
+            "valueDataType": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "valueQuestionText": "string",
+            "parentLookup": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.LookupImportExportVM detected>"
+            },
+            "valueName": "string",
+            "exportData": "string"
+          },
+          "dataTypeCd": {
+            "value": "string",
+            "description": "string",
+            "codeTypeCd": {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+            }
+          },
+          "iaTolerance": 3604.7943463106226,
+          "decimalPlaces": 8405,
+          "questionResponses": [
+            "string",
+            "string"
+          ],
+          "dependentResponses": [
+            {
+              "response": "string",
+              "name": "string"
+            },
+            {
+              "response": "string",
+              "name": "string"
+            }
+          ],
+          "copyQuestionToLibrary": true,
+          "showCopyToLibrary": true,
+          "dependentQuestion": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+          },
+          "dependentQuestions": [
+            {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+            },
+            {
+              "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+            }
+          ]
+        }
+      ],
+      "calculations": [
+        {
+          "name": "string",
+          "description": "string",
+          "calculation": "string"
+        },
+        {
+          "name": "string",
+          "description": "string",
+          "calculation": "string"
+        }
+      ]
+    },
+    "documents": [
+      {
+        "documentType": "string",
+        "documentTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "description": "string",
+        "documentName": "string",
+        "docDownloadUrl": "string",
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "fileName": "string"
+      },
+      {
+        "documentType": "string",
+        "documentTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "description": "string",
+        "documentName": "string",
+        "docDownloadUrl": "string",
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "fileName": "string"
+      }
+    ],
+    "graphs": [
+      {
+        "title": "string",
+        "notes": "string",
+        "axis1Label": "string",
+        "axis2Label": "string",
+        "axis1Minimum": 9641.144984085504,
+        "axis1Maximum": 3450.1030248346297,
+        "axis2Minimum": 7508.138555048043,
+        "axis2Maximum": 3740.226887576079,
+        "axis1DatapointIncludeInd": false,
+        "axis2DatapointIncludeInd": false,
+        "polynomialCount": 958,
+        "axis1DataTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "axis2DataTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "connectDatapointInd": true,
+        "trendlineTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "zeroDatasetExcludeTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "graphSeries": [
+          {
+            "seriesName": "string",
+            "mtGraphAxisId1": 9954,
+            "mtGraphAxisId2": 5874,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": true,
+            "selectedAxis1QuestionIds": [
+              3246,
+              1071
+            ],
+            "selectedAxis2QuestionIds": [
+              4069,
+              6815
+            ]
+          },
+          {
+            "seriesName": "string",
+            "mtGraphAxisId1": 9157,
+            "mtGraphAxisId2": 2823,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": false,
+            "selectedAxis1QuestionIds": [
+              7766,
+              9996
+            ],
+            "selectedAxis2QuestionIds": [
+              5294,
+              3841
+            ]
+          }
+        ]
+      },
+      {
+        "title": "string",
+        "notes": "string",
+        "axis1Label": "string",
+        "axis2Label": "string",
+        "axis1Minimum": 264.73392446671795,
+        "axis1Maximum": 6586.994143697091,
+        "axis2Minimum": 3529.721375922468,
+        "axis2Maximum": 8388.696289297313,
+        "axis1DatapointIncludeInd": false,
+        "axis2DatapointIncludeInd": false,
+        "polynomialCount": 2779,
+        "axis1DataTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "axis2DataTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "connectDatapointInd": true,
+        "trendlineTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "zeroDatasetExcludeTypeCd": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "graphSeries": [
+          {
+            "seriesName": "string",
+            "mtGraphAxisId1": 434,
+            "mtGraphAxisId2": 5672,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": false,
+            "selectedAxis1QuestionIds": [
+              8115,
+              8781
+            ],
+            "selectedAxis2QuestionIds": [
+              9896,
+              3864
+            ]
+          },
+          {
+            "seriesName": "string",
+            "mtGraphAxisId1": 5088,
+            "mtGraphAxisId2": 5888,
+            "useAxis1ValueInd": true,
+            "useAxis2ValueInd": true,
+            "selectedAxis1QuestionIds": [
+              9770,
+              2391
+            ],
+            "selectedAxis2QuestionIds": [
+              8918,
+              226
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/importTest
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "name": "string",
+        "description": "string",
+        "effectiveDate": "2000-11-14T19:13:17.707Z",
+        "expirationDate": "2018-12-08T17:10:40.782Z",
+        "testTypeCD": {
+          "value": "string",
+          "description": "string",
+          "codeTypeCd": {
+            "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+          }
+        },
+        "testMethod": "string",
+        "standardNote": "string",
+        "approvalWorkflowID": 7654,
+        "versionNumber": 2995,
+        "infoMessage": "string",
+        "surveyGroup": {
+          "name": "string",
+          "separator": "string",
+          "sequenceNumber": 3971,
+          "questions": [
+            {
+              "name": "string",
+              "question": "string",
+              "graphValue": "string",
+              "graphAxisLabel": "string",
+              "importReferenceID": 9049,
+              "enabledInd": false,
+              "propertyInd": true,
+              "requiredInd": true,
+              "resultInd": false,
+              "uom": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "hiddenInd": false,
+              "questionTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "calculation": {
+                "name": "string",
+                "description": "string",
+                "calculation": "string"
+              },
+              "listSourceCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "listValueCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "controlTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "linkedSurvey": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.TestsImportExportVM detected>"
+              },
+              "linkedSurveyQuestion": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+              },
+              "linkedSurveyInstance": 8270,
+              "lookup": {
+                "name": "string",
+                "effectiveDate": "1971-12-28T17:49:29.708Z",
+                "expirationDate": "1981-04-24T00:27:49.806Z",
+                "valueDataType": {
+                  "value": "string",
+                  "description": "string",
+                  "codeTypeCd": {
+                    "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                  }
+                },
+                "valueQuestionText": "string",
+                "parentLookup": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.LookupImportExportVM detected>"
+                },
+                "valueName": "string",
+                "exportData": "string"
+              },
+              "dataTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "iaTolerance": 1329.1773247878425,
+              "decimalPlaces": 2321,
+              "questionResponses": [
+                "string",
+                "string"
+              ],
+              "dependentResponses": [
+                {
+                  "response": "string",
+                  "name": "string"
+                },
+                {
+                  "response": "string",
+                  "name": "string"
+                }
+              ],
+              "copyQuestionToLibrary": false,
+              "showCopyToLibrary": false,
+              "dependentQuestion": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+              },
+              "dependentQuestions": [
+                {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+                },
+                {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+                }
+              ]
+            },
+            {
+              "name": "string",
+              "question": "string",
+              "graphValue": "string",
+              "graphAxisLabel": "string",
+              "importReferenceID": 7707,
+              "enabledInd": false,
+              "propertyInd": true,
+              "requiredInd": false,
+              "resultInd": false,
+              "uom": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "hiddenInd": true,
+              "questionTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "calculation": {
+                "name": "string",
+                "description": "string",
+                "calculation": "string"
+              },
+              "listSourceCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "listValueCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "controlTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "linkedSurvey": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.TestsImportExportVM detected>"
+              },
+              "linkedSurveyQuestion": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+              },
+              "linkedSurveyInstance": 4278,
+              "lookup": {
+                "name": "string",
+                "effectiveDate": "2019-07-19T16:45:32.638Z",
+                "expirationDate": "1949-03-22T03:41:38.841Z",
+                "valueDataType": {
+                  "value": "string",
+                  "description": "string",
+                  "codeTypeCd": {
+                    "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                  }
+                },
+                "valueQuestionText": "string",
+                "parentLookup": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.LookupImportExportVM detected>"
+                },
+                "valueName": "string",
+                "exportData": "string"
+              },
+              "dataTypeCd": {
+                "value": "string",
+                "description": "string",
+                "codeTypeCd": {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+                }
+              },
+              "iaTolerance": 3604.7943463106226,
+              "decimalPlaces": 8405,
+              "questionResponses": [
+                "string",
+                "string"
+              ],
+              "dependentResponses": [
+                {
+                  "response": "string",
+                  "name": "string"
+                },
+                {
+                  "response": "string",
+                  "name": "string"
+                }
+              ],
+              "copyQuestionToLibrary": true,
+              "showCopyToLibrary": true,
+              "dependentQuestion": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+              },
+              "dependentQuestions": [
+                {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+                },
+                {
+                  "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.QuestionImportExportVM detected>"
+                }
+              ]
+            }
+          ],
+          "calculations": [
+            {
+              "name": "string",
+              "description": "string",
+              "calculation": "string"
+            },
+            {
+              "name": "string",
+              "description": "string",
+              "calculation": "string"
+            }
+          ]
+        },
+        "documents": [
+          {
+            "documentType": "string",
+            "documentTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "description": "string",
+            "documentName": "string",
+            "docDownloadUrl": "string",
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "fileName": "string"
+          },
+          {
+            "documentType": "string",
+            "documentTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "description": "string",
+            "documentName": "string",
+            "docDownloadUrl": "string",
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "fileName": "string"
+          }
+        ],
+        "graphs": [
+          {
+            "title": "string",
+            "notes": "string",
+            "axis1Label": "string",
+            "axis2Label": "string",
+            "axis1Minimum": 9641.144984085504,
+            "axis1Maximum": 3450.1030248346297,
+            "axis2Minimum": 7508.138555048043,
+            "axis2Maximum": 3740.226887576079,
+            "axis1DatapointIncludeInd": false,
+            "axis2DatapointIncludeInd": false,
+            "polynomialCount": 958,
+            "axis1DataTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "axis2DataTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "connectDatapointInd": true,
+            "trendlineTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "zeroDatasetExcludeTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "graphSeries": [
+              {
+                "seriesName": "string",
+                "mtGraphAxisId1": 9954,
+                "mtGraphAxisId2": 5874,
+                "useAxis1ValueInd": true,
+                "useAxis2ValueInd": true,
+                "selectedAxis1QuestionIds": [
+                  3246,
+                  1071
+                ],
+                "selectedAxis2QuestionIds": [
+                  4069,
+                  6815
+                ]
+              },
+              {
+                "seriesName": "string",
+                "mtGraphAxisId1": 9157,
+                "mtGraphAxisId2": 2823,
+                "useAxis1ValueInd": true,
+                "useAxis2ValueInd": false,
+                "selectedAxis1QuestionIds": [
+                  7766,
+                  9996
+                ],
+                "selectedAxis2QuestionIds": [
+                  5294,
+                  3841
+                ]
+              }
+            ]
+          },
+          {
+            "title": "string",
+            "notes": "string",
+            "axis1Label": "string",
+            "axis2Label": "string",
+            "axis1Minimum": 264.73392446671795,
+            "axis1Maximum": 6586.994143697091,
+            "axis2Minimum": 3529.721375922468,
+            "axis2Maximum": 8388.696289297313,
+            "axis1DatapointIncludeInd": false,
+            "axis2DatapointIncludeInd": false,
+            "polynomialCount": 2779,
+            "axis1DataTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "axis2DataTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "connectDatapointInd": true,
+            "trendlineTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "zeroDatasetExcludeTypeCd": {
+              "value": "string",
+              "description": "string",
+              "codeTypeCd": {
+                "value": "<Circular reference to #/components/schemas/MMS.Shared.Models.Tests.SmCodeImportExportVM detected>"
+              }
+            },
+            "graphSeries": [
+              {
+                "seriesName": "string",
+                "mtGraphAxisId1": 434,
+                "mtGraphAxisId2": 5672,
+                "useAxis1ValueInd": true,
+                "useAxis2ValueInd": false,
+                "selectedAxis1QuestionIds": [
+                  8115,
+                  8781
+                ],
+                "selectedAxis2QuestionIds": [
+                  9896,
+                  3864
+                ]
+              },
+              {
+                "seriesName": "string",
+                "mtGraphAxisId1": 5088,
+                "mtGraphAxisId2": 5888,
+                "useAxis1ValueInd": true,
+                "useAxis2ValueInd": true,
+                "selectedAxis1QuestionIds": [
+                  9770,
+                  2391
+                ],
+                "selectedAxis2QuestionIds": [
+                  8918,
+                  226
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

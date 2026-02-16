@@ -1,0 +1,405 @@
+meta {
+  name: /api/mms/Equipment/SaveEquipmentDetails
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentDetails
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "equipmentId": 5943,
+    "equipmentName": "string",
+    "description": "string",
+    "stateId": "string",
+    "purchaseDate": "2013-01-09T07:45:30.001Z",
+    "disposalDate": "1975-01-02T05:33:35.340Z",
+    "calibrationDate": "1982-03-20T08:33:38.934Z",
+    "smDomainId": 389,
+    "equipmentProperties": [
+      {
+        "equipmentPropertyId": 6697,
+        "equipmentId": 9934,
+        "propertyCodeCd": 2327,
+        "propertyValue": "string"
+      },
+      {
+        "equipmentPropertyId": 9535,
+        "equipmentId": 5235,
+        "propertyCodeCd": 1879,
+        "propertyValue": "string"
+      }
+    ],
+    "documents": [
+      {
+        "smDocumentId": 3864,
+        "cmSubcontractId": 3355,
+        "documentTypeCd": 4263,
+        "documentDescription": "string",
+        "documentName": "string",
+        "cmChangeOrderId": 160,
+        "fileName": "string",
+        "cmLedgerEntryId": 5962,
+        "repositoryDocumentId": 1525,
+        "cmLedgerItemId": 8436,
+        "ebBidCertificationId": 9181,
+        "mtApprovalId": 9387,
+        "cmDiaryId": 8348,
+        "mtTestId": 5149,
+        "cmCertificateId": 6246,
+        "cmRequestForInformationId": 8932,
+        "cmFinalizationId": 1764,
+        "cmSubcontractPaymentId": 2442,
+        "cmSubcontractDbeId": 9658,
+        "paymentNumber": 9134,
+        "paymentReceivedDate": "1998-05-05T14:02:03.628Z",
+        "overrideAmount": 2359.6262332499828,
+        "comments": "string",
+        "rowid": "8fabf969-7aa2-95e5-1b03-48b7dc69b6a4",
+        "smCompanyReceiptId": 5089,
+        "geoLatitude": 3982.5120827232554,
+        "geoLongitude": 9416.670997117626,
+        "ebContractId": 4937,
+        "smCompanyApplicationId": 9932,
+        "smDomainId": 5060,
+        "mtMaterialId": 4605,
+        "mtSurveyId": 8743,
+        "mtTestResponseId": 457,
+        "crsContractWageRateId": 1491,
+        "smApplicationObjectId": 6539,
+        "ebContract": 3173,
+        "ebFilterContractId": 9561,
+        "contractVersionProposalId": 9039,
+        "contractVersionProposalOtherId": 885,
+        "metadata": "string",
+        "ebAddendumId": 7196,
+        "sequenceNumber": 9912,
+        "requestContractorChecklistId": 7008,
+        "responseContractorChecklistId": 1902,
+        "bidContractDraftId": 917,
+        "bidContractOtherId": 482,
+        "ebBidAwardReviewId": 2948,
+        "ebContractBondId": 4287,
+        "ebContractInsuranceId": 208,
+        "uploadedBy": "string",
+        "affiliation": "string",
+        "inclusionTypeCd": 5975,
+        "documentLocationTypeCd": 6638,
+        "mtMixDesignId": 4752,
+        "mode": "string",
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "status": "string",
+        "createdBy": "string",
+        "createDate": "2023-12-06T15:12:15.148Z",
+        "lastUpdateDate": "1998-11-17T08:16:48.907Z",
+        "lastUpdateBy": "string",
+        "versionNumber": 9470,
+        "documentTypeCdNavigation": {
+          "smDomainCodeCd": 3944,
+          "value": "string",
+          "description": "string",
+          "longDescription": "string",
+          "codeTypeCd": 9924
+        },
+        "domainCodeDescription": "string",
+        "isNew": false
+      },
+      {
+        "smDocumentId": 5318,
+        "cmSubcontractId": 4256,
+        "documentTypeCd": 6673,
+        "documentDescription": "string",
+        "documentName": "string",
+        "cmChangeOrderId": 2695,
+        "fileName": "string",
+        "cmLedgerEntryId": 2968,
+        "repositoryDocumentId": 7535,
+        "cmLedgerItemId": 2071,
+        "ebBidCertificationId": 6694,
+        "mtApprovalId": 4965,
+        "cmDiaryId": 1792,
+        "mtTestId": 3335,
+        "cmCertificateId": 9523,
+        "cmRequestForInformationId": 5671,
+        "cmFinalizationId": 3376,
+        "cmSubcontractPaymentId": 366,
+        "cmSubcontractDbeId": 85,
+        "paymentNumber": 2454,
+        "paymentReceivedDate": "2003-04-13T21:46:17.316Z",
+        "overrideAmount": 5568.579035537747,
+        "comments": "string",
+        "rowid": "05ef29ec-e73d-6e59-8269-d61c12d9fab2",
+        "smCompanyReceiptId": 1173,
+        "geoLatitude": 3426.625348757291,
+        "geoLongitude": 4479.932780536484,
+        "ebContractId": 4722,
+        "smCompanyApplicationId": 3387,
+        "smDomainId": 8756,
+        "mtMaterialId": 1621,
+        "mtSurveyId": 6891,
+        "mtTestResponseId": 5728,
+        "crsContractWageRateId": 1499,
+        "smApplicationObjectId": 7877,
+        "ebContract": 261,
+        "ebFilterContractId": 7457,
+        "contractVersionProposalId": 7634,
+        "contractVersionProposalOtherId": 1603,
+        "metadata": "string",
+        "ebAddendumId": 4348,
+        "sequenceNumber": 9042,
+        "requestContractorChecklistId": 6237,
+        "responseContractorChecklistId": 7011,
+        "bidContractDraftId": 9958,
+        "bidContractOtherId": 8191,
+        "ebBidAwardReviewId": 7084,
+        "ebContractBondId": 4941,
+        "ebContractInsuranceId": 5830,
+        "uploadedBy": "string",
+        "affiliation": "string",
+        "inclusionTypeCd": 4046,
+        "documentLocationTypeCd": 7677,
+        "mtMixDesignId": 6218,
+        "mode": "string",
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "status": "string",
+        "createdBy": "string",
+        "createDate": "1950-06-26T21:57:59.300Z",
+        "lastUpdateDate": "1979-05-04T08:26:53.649Z",
+        "lastUpdateBy": "string",
+        "versionNumber": 5198,
+        "documentTypeCdNavigation": {
+          "smDomainCodeCd": 7518,
+          "value": "string",
+          "description": "string",
+          "longDescription": "string",
+          "codeTypeCd": 9126
+        },
+        "domainCodeDescription": "string",
+        "isNew": false
+      }
+    ],
+    "purchaseDateUser": "1966-12-11T11:27:15.357Z",
+    "disposalDateUser": "2000-05-07T07:32:46.591Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentDetails
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "equipmentId": 5943,
+        "equipmentName": "string",
+        "description": "string",
+        "stateId": "string",
+        "purchaseDate": "2013-01-09T07:45:30.001Z",
+        "disposalDate": "1975-01-02T05:33:35.340Z",
+        "calibrationDate": "1982-03-20T08:33:38.934Z",
+        "smDomainId": 389,
+        "equipmentProperties": [
+          {
+            "equipmentPropertyId": 6697,
+            "equipmentId": 9934,
+            "propertyCodeCd": 2327,
+            "propertyValue": "string"
+          },
+          {
+            "equipmentPropertyId": 9535,
+            "equipmentId": 5235,
+            "propertyCodeCd": 1879,
+            "propertyValue": "string"
+          }
+        ],
+        "documents": [
+          {
+            "smDocumentId": 3864,
+            "cmSubcontractId": 3355,
+            "documentTypeCd": 4263,
+            "documentDescription": "string",
+            "documentName": "string",
+            "cmChangeOrderId": 160,
+            "fileName": "string",
+            "cmLedgerEntryId": 5962,
+            "repositoryDocumentId": 1525,
+            "cmLedgerItemId": 8436,
+            "ebBidCertificationId": 9181,
+            "mtApprovalId": 9387,
+            "cmDiaryId": 8348,
+            "mtTestId": 5149,
+            "cmCertificateId": 6246,
+            "cmRequestForInformationId": 8932,
+            "cmFinalizationId": 1764,
+            "cmSubcontractPaymentId": 2442,
+            "cmSubcontractDbeId": 9658,
+            "paymentNumber": 9134,
+            "paymentReceivedDate": "1998-05-05T14:02:03.628Z",
+            "overrideAmount": 2359.6262332499828,
+            "comments": "string",
+            "rowid": "8fabf969-7aa2-95e5-1b03-48b7dc69b6a4",
+            "smCompanyReceiptId": 5089,
+            "geoLatitude": 3982.5120827232554,
+            "geoLongitude": 9416.670997117626,
+            "ebContractId": 4937,
+            "smCompanyApplicationId": 9932,
+            "smDomainId": 5060,
+            "mtMaterialId": 4605,
+            "mtSurveyId": 8743,
+            "mtTestResponseId": 457,
+            "crsContractWageRateId": 1491,
+            "smApplicationObjectId": 6539,
+            "ebContract": 3173,
+            "ebFilterContractId": 9561,
+            "contractVersionProposalId": 9039,
+            "contractVersionProposalOtherId": 885,
+            "metadata": "string",
+            "ebAddendumId": 7196,
+            "sequenceNumber": 9912,
+            "requestContractorChecklistId": 7008,
+            "responseContractorChecklistId": 1902,
+            "bidContractDraftId": 917,
+            "bidContractOtherId": 482,
+            "ebBidAwardReviewId": 2948,
+            "ebContractBondId": 4287,
+            "ebContractInsuranceId": 208,
+            "uploadedBy": "string",
+            "affiliation": "string",
+            "inclusionTypeCd": 5975,
+            "documentLocationTypeCd": 6638,
+            "mtMixDesignId": 4752,
+            "mode": "string",
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "status": "string",
+            "createdBy": "string",
+            "createDate": "2023-12-06T15:12:15.148Z",
+            "lastUpdateDate": "1998-11-17T08:16:48.907Z",
+            "lastUpdateBy": "string",
+            "versionNumber": 9470,
+            "documentTypeCdNavigation": {
+              "smDomainCodeCd": 3944,
+              "value": "string",
+              "description": "string",
+              "longDescription": "string",
+              "codeTypeCd": 9924
+            },
+            "domainCodeDescription": "string",
+            "isNew": false
+          },
+          {
+            "smDocumentId": 5318,
+            "cmSubcontractId": 4256,
+            "documentTypeCd": 6673,
+            "documentDescription": "string",
+            "documentName": "string",
+            "cmChangeOrderId": 2695,
+            "fileName": "string",
+            "cmLedgerEntryId": 2968,
+            "repositoryDocumentId": 7535,
+            "cmLedgerItemId": 2071,
+            "ebBidCertificationId": 6694,
+            "mtApprovalId": 4965,
+            "cmDiaryId": 1792,
+            "mtTestId": 3335,
+            "cmCertificateId": 9523,
+            "cmRequestForInformationId": 5671,
+            "cmFinalizationId": 3376,
+            "cmSubcontractPaymentId": 366,
+            "cmSubcontractDbeId": 85,
+            "paymentNumber": 2454,
+            "paymentReceivedDate": "2003-04-13T21:46:17.316Z",
+            "overrideAmount": 5568.579035537747,
+            "comments": "string",
+            "rowid": "05ef29ec-e73d-6e59-8269-d61c12d9fab2",
+            "smCompanyReceiptId": 1173,
+            "geoLatitude": 3426.625348757291,
+            "geoLongitude": 4479.932780536484,
+            "ebContractId": 4722,
+            "smCompanyApplicationId": 3387,
+            "smDomainId": 8756,
+            "mtMaterialId": 1621,
+            "mtSurveyId": 6891,
+            "mtTestResponseId": 5728,
+            "crsContractWageRateId": 1499,
+            "smApplicationObjectId": 7877,
+            "ebContract": 261,
+            "ebFilterContractId": 7457,
+            "contractVersionProposalId": 7634,
+            "contractVersionProposalOtherId": 1603,
+            "metadata": "string",
+            "ebAddendumId": 4348,
+            "sequenceNumber": 9042,
+            "requestContractorChecklistId": 6237,
+            "responseContractorChecklistId": 7011,
+            "bidContractDraftId": 9958,
+            "bidContractOtherId": 8191,
+            "ebBidAwardReviewId": 7084,
+            "ebContractBondId": 4941,
+            "ebContractInsuranceId": 5830,
+            "uploadedBy": "string",
+            "affiliation": "string",
+            "inclusionTypeCd": 4046,
+            "documentLocationTypeCd": 7677,
+            "mtMixDesignId": 6218,
+            "mode": "string",
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "status": "string",
+            "createdBy": "string",
+            "createDate": "1950-06-26T21:57:59.300Z",
+            "lastUpdateDate": "1979-05-04T08:26:53.649Z",
+            "lastUpdateBy": "string",
+            "versionNumber": 5198,
+            "documentTypeCdNavigation": {
+              "smDomainCodeCd": 7518,
+              "value": "string",
+              "description": "string",
+              "longDescription": "string",
+              "codeTypeCd": 9126
+            },
+            "domainCodeDescription": "string",
+            "isNew": false
+          }
+        ],
+        "purchaseDateUser": "1966-12-11T11:27:15.357Z",
+        "disposalDateUser": "2000-05-07T07:32:46.591Z"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

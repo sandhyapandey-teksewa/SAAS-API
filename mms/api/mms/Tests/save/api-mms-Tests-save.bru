@@ -1,0 +1,81 @@
+meta {
+  name: /api/mms/Tests/save
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtSurveyId": 2876,
+    "name": "string",
+    "description": "string",
+    "effectiveDate": "1952-08-21T15:20:19.044Z",
+    "expirationDate": "1947-10-02T15:06:37.461Z",
+    "testTypeID": 367,
+    "testMethod": "string",
+    "standardNote": "string",
+    "approvalWorkflowID": 1380,
+    "versionNumber": 7777,
+    "infoMessage": "string",
+    "isEditable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtSurveyId": 2876,
+        "name": "string",
+        "description": "string",
+        "effectiveDate": "1952-08-21T15:20:19.044Z",
+        "expirationDate": "1947-10-02T15:06:37.461Z",
+        "testTypeID": 367,
+        "testMethod": "string",
+        "standardNote": "string",
+        "approvalWorkflowID": 1380,
+        "versionNumber": 7777,
+        "infoMessage": "string",
+        "isEditable": true
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

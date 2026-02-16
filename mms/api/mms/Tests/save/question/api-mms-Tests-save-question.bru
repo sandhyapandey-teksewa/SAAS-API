@@ -1,0 +1,155 @@
+meta {
+  name: /api/mms/Tests/save/question
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/save/question
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtSurveyId": 6650,
+    "mtSurveyQuestionId": 1364,
+    "name": "string",
+    "question": "string",
+    "graphValue": "string",
+    "graphAxisLabel": "string",
+    "importReferenceID": 5509,
+    "enabledInd": true,
+    "propertyInd": true,
+    "requiredInd": true,
+    "resultInd": true,
+    "uom": 7822,
+    "hiddenInd": true,
+    "questionTypeCd": 1733,
+    "mtSurveyCalculationId": 6695,
+    "listSourceCd": 9691,
+    "listValueCd": 1623,
+    "controlTypeCd": 2299,
+    "linkedMtSurveyId": 61,
+    "linkedMtSurveyQuestionId": 2764,
+    "linkedMtSurveyInstance": 9289,
+    "mtLookupId": 1114,
+    "dataTypeCd": 2066,
+    "iaTolerance": 4932.155545873127,
+    "decimalPlaces": 556,
+    "questionResponses": [
+      "string",
+      "string"
+    ],
+    "dependentResponses": [
+      {
+        "mtSurveyQuestionResponseId": 727,
+        "response": "string",
+        "name": "string"
+      },
+      {
+        "mtSurveyQuestionResponseId": 7485,
+        "response": "string",
+        "name": "string"
+      }
+    ],
+    "copyQuestionToLibrary": true,
+    "isEditable": false,
+    "showCopyToLibrary": false,
+    "dependentQuestionId": 6414,
+    "dependentResponseIds": "string",
+    "mtMixDesignId": 3969,
+    "requestSource": "string",
+    "associatedTestQuestionId": 9702
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/save/question
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtSurveyId": 6650,
+        "mtSurveyQuestionId": 1364,
+        "name": "string",
+        "question": "string",
+        "graphValue": "string",
+        "graphAxisLabel": "string",
+        "importReferenceID": 5509,
+        "enabledInd": true,
+        "propertyInd": true,
+        "requiredInd": true,
+        "resultInd": true,
+        "uom": 7822,
+        "hiddenInd": true,
+        "questionTypeCd": 1733,
+        "mtSurveyCalculationId": 6695,
+        "listSourceCd": 9691,
+        "listValueCd": 1623,
+        "controlTypeCd": 2299,
+        "linkedMtSurveyId": 61,
+        "linkedMtSurveyQuestionId": 2764,
+        "linkedMtSurveyInstance": 9289,
+        "mtLookupId": 1114,
+        "dataTypeCd": 2066,
+        "iaTolerance": 4932.155545873127,
+        "decimalPlaces": 556,
+        "questionResponses": [
+          "string",
+          "string"
+        ],
+        "dependentResponses": [
+          {
+            "mtSurveyQuestionResponseId": 727,
+            "response": "string",
+            "name": "string"
+          },
+          {
+            "mtSurveyQuestionResponseId": 7485,
+            "response": "string",
+            "name": "string"
+          }
+        ],
+        "copyQuestionToLibrary": true,
+        "isEditable": false,
+        "showCopyToLibrary": false,
+        "dependentQuestionId": 6414,
+        "dependentResponseIds": "string",
+        "mtMixDesignId": 3969,
+        "requestSource": "string",
+        "associatedTestQuestionId": 9702
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

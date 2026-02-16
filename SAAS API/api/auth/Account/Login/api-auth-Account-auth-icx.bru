@@ -1,0 +1,62 @@
+meta {
+  name: /api/auth/Account/auth-icx
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseurl}}/api/auth/Account/auth-icx
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "UserName": "aaron-saraswoti",
+    "Password": "Saas@123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/auth-icx
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "UserName": "string",
+        "Password": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

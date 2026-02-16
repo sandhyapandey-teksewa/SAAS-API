@@ -1,0 +1,133 @@
+meta {
+  name: /api/mms/Equipment/SaveEquipmentCalibrations
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentCalibrations
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  [
+    {
+      "equipmentId": 2297,
+      "mtSurveyId": 7925,
+      "smFacilityId": 5248,
+      "mtSurveyRequirementId": 4178,
+      "testTypeCd": 3405,
+      "surveyName": "string",
+      "method": "string",
+      "frequencyAmount": 2618.1998595626865,
+      "frequencType": "string",
+      "frequencTypeUom": "string",
+      "testTypeString": "string",
+      "frequencTypeCd": 9387,
+      "frequencTypeUomCd": 1705,
+      "comments": "string",
+      "requiredInd": "string",
+      "updated": true,
+      "new": true
+    },
+    {
+      "equipmentId": 5901,
+      "mtSurveyId": 5660,
+      "smFacilityId": 434,
+      "mtSurveyRequirementId": 2645,
+      "testTypeCd": 161,
+      "surveyName": "string",
+      "method": "string",
+      "frequencyAmount": 1050.9278184225889,
+      "frequencType": "string",
+      "frequencTypeUom": "string",
+      "testTypeString": "string",
+      "frequencTypeCd": 6642,
+      "frequencTypeUomCd": 38,
+      "comments": "string",
+      "requiredInd": "string",
+      "updated": false,
+      "new": true
+    }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentCalibrations
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      [
+        {
+          "equipmentId": 2297,
+          "mtSurveyId": 7925,
+          "smFacilityId": 5248,
+          "mtSurveyRequirementId": 4178,
+          "testTypeCd": 3405,
+          "surveyName": "string",
+          "method": "string",
+          "frequencyAmount": 2618.1998595626865,
+          "frequencType": "string",
+          "frequencTypeUom": "string",
+          "testTypeString": "string",
+          "frequencTypeCd": 9387,
+          "frequencTypeUomCd": 1705,
+          "comments": "string",
+          "requiredInd": "string",
+          "updated": true,
+          "new": true
+        },
+        {
+          "equipmentId": 5901,
+          "mtSurveyId": 5660,
+          "smFacilityId": 434,
+          "mtSurveyRequirementId": 2645,
+          "testTypeCd": 161,
+          "surveyName": "string",
+          "method": "string",
+          "frequencyAmount": 1050.9278184225889,
+          "frequencType": "string",
+          "frequencTypeUom": "string",
+          "testTypeString": "string",
+          "frequencTypeCd": 6642,
+          "frequencTypeUomCd": 38,
+          "comments": "string",
+          "requiredInd": "string",
+          "updated": false,
+          "new": true
+        }
+      ]
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

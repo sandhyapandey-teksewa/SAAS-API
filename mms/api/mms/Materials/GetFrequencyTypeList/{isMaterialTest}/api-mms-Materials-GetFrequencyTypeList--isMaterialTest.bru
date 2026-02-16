@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Materials/GetFrequencyTypeList/:isMaterialTest
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/GetFrequencyTypeList/:isMaterialTest
+  body: none
+  auth: inherit
+}
+
+params:path {
+  isMaterialTest: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/GetFrequencyTypeList/:isMaterialTest
+    method: GET
+    mode: none
+    params:path: {
+      isMaterialTest: false
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

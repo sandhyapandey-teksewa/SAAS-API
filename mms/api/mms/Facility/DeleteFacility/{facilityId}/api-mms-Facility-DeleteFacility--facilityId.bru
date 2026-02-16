@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Facility/DeleteFacility/:facilityId
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mmsUrl}}/api/mms/Facility/DeleteFacility/:facilityId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  facilityId: 941374610
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Facility/DeleteFacility/:facilityId
+    method: POST
+    mode: none
+    params:path: {
+      facilityId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

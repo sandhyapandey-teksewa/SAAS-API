@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Sample/DeleteTest/:MtTestId
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Sample/DeleteTest/:MtTestId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  MtTestId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Sample/DeleteTest/:MtTestId
+    method: POST
+    mode: none
+    params:path: {
+      MtTestId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

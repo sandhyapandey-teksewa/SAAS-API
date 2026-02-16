@@ -1,0 +1,58 @@
+meta {
+  name: /api/mms/Samples/GetSurveyQuestionsAndQuestionEntries/:MtSurveyId/:MtTestId/:surveyType/:sampleId/:showResultsMode
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Samples/GetSurveyQuestionsAndQuestionEntries/:MtSurveyId/:MtTestId/:surveyType/:sampleId/:showResultsMode
+  body: none
+  auth: inherit
+}
+
+params:path {
+  MtSurveyId: 698
+  MtTestId: 698
+  surveyType: string
+  sampleId: 0
+  showResultsMode: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Samples/GetSurveyQuestionsAndQuestionEntries/:MtSurveyId/:MtTestId/:surveyType/:sampleId/:showResultsMode
+    method: GET
+    mode: none
+    params:path: {
+      MtSurveyId: 698
+      MtTestId: 698
+      surveyType: string
+      sampleId: 0
+      showResultsMode: false
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

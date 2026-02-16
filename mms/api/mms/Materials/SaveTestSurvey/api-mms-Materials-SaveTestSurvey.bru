@@ -1,0 +1,73 @@
+meta {
+  name: /api/mms/Materials/SaveTestSurvey
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Materials/SaveTestSurvey
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  MtSurveyRequirementId: 429
+  MtMaterialId: 6063
+  MtSurveyId: 6878
+  TestName: string
+  TestFrequencyCd: 6219
+  TestFrequencyUomCd: 2716
+  FrequencyAmount: 8031.148688879081
+  RequiredInd: false
+  Comments: string
+  QuestionAndResponses: [object Object],[object Object]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/SaveTestSurvey
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      MtSurveyRequirementId: 429
+      MtMaterialId: 6063
+      MtSurveyId: 6878
+      TestName: string
+      TestFrequencyCd: 6219
+      TestFrequencyUomCd: 2716
+      FrequencyAmount: 8031.148688879081
+      RequiredInd: false
+      Comments: string
+      QuestionAndResponses: [object Object],[object Object]
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

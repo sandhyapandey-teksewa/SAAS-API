@@ -1,0 +1,104 @@
+meta {
+  name: /api/mms/Testers/save
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mmsUrl}}/api/mms/Testers/save
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "testerId": 3727802,
+    "isActive": false,
+    "testerName": "anisha",
+    "address1": "kath",
+    "address2": "lalitpur",
+    "city": "KTM",
+    "stateId": 14,
+    "zipCode": "44607",
+    "phoneNumber": "123459823",
+    "emailAddress": "usr@gmail.com",
+    "testerNumber": "345",
+    "comments": "Testing",
+    "certifications": [
+      {
+         "certificationId": 3727803,
+                  "certificationDate": "2026-02-12T00:00:00",
+                  "expirationDate": "2027-02-11T00:00:00",
+                  "comments": "test test"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Testers/save
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "testerId": 5696,
+        "isActive": true,
+        "testerName": "string",
+        "address1": "string",
+        "address2": "string",
+        "city": "string",
+        "stateId": 5443,
+        "zipCode": "string",
+        "phoneNumber": "string",
+        "emailAddress": "string",
+        "testerNumber": "string",
+        "comments": "string",
+        "certifications": [
+          {
+            "certificationId": 5110,
+            "certificationDate": "2005-09-11T13:09:47.451Z",
+            "expirationDate": "1969-11-07T01:15:10.854Z",
+            "comments": "string"
+          },
+          {
+            "certificationId": 1488,
+            "certificationDate": "2014-05-31T09:59:12.083Z",
+            "expirationDate": "1955-01-25T11:32:04.144Z",
+            "comments": "string"
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

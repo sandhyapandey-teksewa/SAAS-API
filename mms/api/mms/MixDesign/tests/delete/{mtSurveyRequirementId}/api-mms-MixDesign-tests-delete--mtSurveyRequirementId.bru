@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/MixDesign/tests/delete/:mtSurveyRequirementId
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/MixDesign/tests/delete/:mtSurveyRequirementId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtSurveyRequirementId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/tests/delete/:mtSurveyRequirementId
+    method: POST
+    mode: none
+    params:path: {
+      mtSurveyRequirementId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

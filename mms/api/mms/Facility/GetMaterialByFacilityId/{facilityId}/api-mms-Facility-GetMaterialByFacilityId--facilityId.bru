@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Facility/GetMaterialByFacilityId/:facilityId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Facility/GetMaterialByFacilityId/:facilityId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  facilityId: 937913048
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Facility/GetMaterialByFacilityId/:facilityId
+    method: GET
+    mode: none
+    params:path: {
+      facilityId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

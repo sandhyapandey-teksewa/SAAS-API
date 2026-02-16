@@ -1,0 +1,55 @@
+meta {
+  name: /api/auth/Account/getUserRights
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseurl}}/api/auth/Account/getUserRights?personId=4524
+  body: json
+  auth: bearer
+}
+
+params:query {
+  personId: 4524
+}
+
+auth:bearer {
+  token: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/getUserRights?personId=4524
+    method: GET
+    mode: none
+    params:query: {
+      personId: 4524
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,141 @@
+meta {
+  name: /api/mms/Materials/AddNewMaterialVersion
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Materials/AddNewMaterialVersion
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  MtMaterialId: 2451
+  MaterialNumber: string
+  Name: string
+  Description: string
+  UnitOfMeasureCd: 5297
+  CategoryCd: 7944
+  StatusCd: 62
+  Comments: string
+  CreatedBy: string
+  CreateDate: 1989-08-30T06:42:04.861Z
+  LastUpdateDate: 1959-09-25T18:42:21.219Z
+  LastUpdateBy: string
+  VersionNumber: 9496
+  TypeCd: 4839
+  Rowid: 71b28b81-7a3d-ec81-9cb6-48d9eaf226e5
+  EffectiveDate: 2009-07-01T14:00:29.812Z
+  ExpirationDate: 1958-09-08T15:53:59.114Z
+  SupplementalInd: string
+  SmDomainId: 1519
+  BuyAmericanInd: string
+  AremaInd: string
+  BuyAmericanEffectiveDate: 2001-06-03T16:47:35.711Z
+  BuyAmericanExpirationDate: 1984-04-10T01:48:29.999Z
+  AremaEffectiveDate: 1989-10-02T09:02:01.278Z
+  AremaExpirationDate: 1969-12-21T13:58:41.373Z
+  Specifications: string
+  SampleDefiniton: string
+  ExperimentalInd: string
+  IncludeMmiInd: string
+  GroupCd: 8647
+  ContainerCd: 5279
+  MaterialDesignReferenceId: 8982
+  ConversionQuantity: 2465.6647396501285
+  ParentMaterialId: 9955
+  Abbreviation: string
+  MaterialDetailVersionNumber: 2193
+  MaterialDetailInformation: string
+  IsLatestVersion: true
+  MoaJson: string
+  MtMoaAssignements: [object Object],[object Object],[object Object],[object Object]
+  Assemblies: [object Object],[object Object]
+  StandardItems: [object Object],[object Object]
+  SurveyRequirements: [object Object],[object Object]
+  Documents: [object Object],[object Object]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/AddNewMaterialVersion
+    method: POST
+    mode: multipartForm
+    headers: {
+      Content-Type: multipart/form-data
+      Authorization: Bearer <token>
+    }
+  
+    body:multipart-form: {
+      MtMaterialId: 2451
+      MaterialNumber: string
+      Name: string
+      Description: string
+      UnitOfMeasureCd: 5297
+      CategoryCd: 7944
+      StatusCd: 62
+      Comments: string
+      CreatedBy: string
+      CreateDate: 1989-08-30T06:42:04.861Z
+      LastUpdateDate: 1959-09-25T18:42:21.219Z
+      LastUpdateBy: string
+      VersionNumber: 9496
+      TypeCd: 4839
+      Rowid: 71b28b81-7a3d-ec81-9cb6-48d9eaf226e5
+      EffectiveDate: 2009-07-01T14:00:29.812Z
+      ExpirationDate: 1958-09-08T15:53:59.114Z
+      SupplementalInd: string
+      SmDomainId: 1519
+      BuyAmericanInd: string
+      AremaInd: string
+      BuyAmericanEffectiveDate: 2001-06-03T16:47:35.711Z
+      BuyAmericanExpirationDate: 1984-04-10T01:48:29.999Z
+      AremaEffectiveDate: 1989-10-02T09:02:01.278Z
+      AremaExpirationDate: 1969-12-21T13:58:41.373Z
+      Specifications: string
+      SampleDefiniton: string
+      ExperimentalInd: string
+      IncludeMmiInd: string
+      GroupCd: 8647
+      ContainerCd: 5279
+      MaterialDesignReferenceId: 8982
+      ConversionQuantity: 2465.6647396501285
+      ParentMaterialId: 9955
+      Abbreviation: string
+      MaterialDetailVersionNumber: 2193
+      MaterialDetailInformation: string
+      IsLatestVersion: true
+      MoaJson: string
+      MtMoaAssignements: [object Object],[object Object],[object Object],[object Object]
+      Assemblies: [object Object],[object Object]
+      StandardItems: [object Object],[object Object]
+      SurveyRequirements: [object Object],[object Object]
+      Documents: [object Object],[object Object]
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

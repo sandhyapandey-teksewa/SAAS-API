@@ -1,0 +1,52 @@
+meta {
+  name: /api/mms/Materials/GetMaterialTestDetails/:mtSurveyId/:mtSurveyRequirementId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/GetMaterialTestDetails/:mtSurveyId/:mtSurveyRequirementId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtSurveyId: 698
+  mtSurveyRequirementId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/GetMaterialTestDetails/:mtSurveyId/:mtSurveyRequirementId
+    method: GET
+    mode: none
+    params:path: {
+      mtSurveyId: 698
+      mtSurveyRequirementId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

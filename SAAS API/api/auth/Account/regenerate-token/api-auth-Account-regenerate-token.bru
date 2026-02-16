@@ -1,0 +1,52 @@
+meta {
+  name: /api/auth/Account/regenerate-token
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseurl}}/api/auth/Account/regenerate-token
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/auth/Account/regenerate-token
+    method: GET
+    mode: none
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

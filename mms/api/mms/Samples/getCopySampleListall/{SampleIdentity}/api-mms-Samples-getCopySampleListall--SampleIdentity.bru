@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Samples/getCopySampleListall/:SampleIdentity
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Samples/getCopySampleListall/:SampleIdentity
+  body: none
+  auth: inherit
+}
+
+params:path {
+  SampleIdentity: string
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Samples/getCopySampleListall/:SampleIdentity
+    method: GET
+    mode: none
+    params:path: {
+      SampleIdentity: string
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

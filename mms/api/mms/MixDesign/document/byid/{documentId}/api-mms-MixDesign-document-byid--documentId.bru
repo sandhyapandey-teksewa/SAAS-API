@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/MixDesign/document/byid/:documentId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/MixDesign/document/byid/:documentId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  documentId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/document/byid/:documentId
+    method: GET
+    mode: none
+    params:path: {
+      documentId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

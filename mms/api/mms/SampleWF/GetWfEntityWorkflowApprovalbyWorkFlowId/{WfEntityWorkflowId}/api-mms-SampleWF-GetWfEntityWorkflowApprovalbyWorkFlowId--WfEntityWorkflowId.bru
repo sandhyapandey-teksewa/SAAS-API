@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/SampleWF/GetWfEntityWorkflowApprovalbyWorkFlowId/:WfEntityWorkflowId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/SampleWF/GetWfEntityWorkflowApprovalbyWorkFlowId/:WfEntityWorkflowId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  WfEntityWorkflowId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/SampleWF/GetWfEntityWorkflowApprovalbyWorkFlowId/:WfEntityWorkflowId
+    method: GET
+    mode: none
+    params:path: {
+      WfEntityWorkflowId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

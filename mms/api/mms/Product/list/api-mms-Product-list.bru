@@ -1,0 +1,51 @@
+meta {
+  name: /api/mms/Product/list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Product/list?activeOnly=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  activeOnly: false
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Product/list?activeOnly=true
+    method: GET
+    mode: none
+    params:query: {
+      activeOnly: true
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

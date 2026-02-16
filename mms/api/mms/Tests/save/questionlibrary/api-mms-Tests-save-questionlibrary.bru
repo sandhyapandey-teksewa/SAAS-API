@@ -1,0 +1,91 @@
+meta {
+  name: /api/mms/Tests/save/questionlibrary
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/save/questionlibrary
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtSurveyQuestionLibId": 582,
+    "name": "string",
+    "questionTypeCd": 6097,
+    "question": "string",
+    "requiredInd": false,
+    "dataTypeCd": 1318,
+    "controlTypeCd": 2116,
+    "uom": 9867,
+    "decimalPlaces": 9296,
+    "resultInd": true,
+    "iaTolerance": 2620.390470537752,
+    "listSourceCd": 4783,
+    "listValueCd": 8783,
+    "questionResponses": [
+      "string",
+      "string"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/save/questionlibrary
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtSurveyQuestionLibId": 582,
+        "name": "string",
+        "questionTypeCd": 6097,
+        "question": "string",
+        "requiredInd": false,
+        "dataTypeCd": 1318,
+        "controlTypeCd": 2116,
+        "uom": 9867,
+        "decimalPlaces": 9296,
+        "resultInd": true,
+        "iaTolerance": 2620.390470537752,
+        "listSourceCd": 4783,
+        "listValueCd": 8783,
+        "questionResponses": [
+          "string",
+          "string"
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,83 @@
+meta {
+  name: /api/mms/Tests/add/document
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Tests/add/document
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "fileName": "string"
+      },
+      {
+        "boxFileId": "string",
+        "boxFilePath": "string",
+        "fileName": "string"
+      }
+    ],
+    "mtSurveyId": 7787
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Tests/add/document
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "documents": [
+          {
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "fileName": "string"
+          },
+          {
+            "boxFileId": "string",
+            "boxFilePath": "string",
+            "fileName": "string"
+          }
+        ],
+        "mtSurveyId": 7787
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

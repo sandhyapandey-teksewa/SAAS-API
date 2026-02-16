@@ -1,0 +1,58 @@
+meta {
+  name: /api/mms/Common/listBySmCodeCd/:smCodeCd
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Common/listBySmCodeCd/:smCodeCd?searchText=
+  body: none
+  auth: inherit
+}
+
+params:query {
+  searchText: 
+}
+
+params:path {
+  smCodeCd: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Common/listBySmCodeCd/:smCodeCd?searchText=
+    method: GET
+    mode: none
+    params:query: {
+      searchText: 
+    }
+  
+    params:path: {
+      smCodeCd: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

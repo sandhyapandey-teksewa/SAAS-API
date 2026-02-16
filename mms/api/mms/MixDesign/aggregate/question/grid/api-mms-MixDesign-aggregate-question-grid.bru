@@ -1,0 +1,52 @@
+meta {
+  name: /api/mms/MixDesign/aggregate/question/grid
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/MixDesign/aggregate/question/grid?mtMixDesignId=698&showHidden=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  mtMixDesignId: 698
+  showHidden: false
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/MixDesign/aggregate/question/grid?mtMixDesignId=698&showHidden=false
+    method: GET
+    mode: none
+    params:query: {
+      mtMixDesignId: 698
+      showHidden: false
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

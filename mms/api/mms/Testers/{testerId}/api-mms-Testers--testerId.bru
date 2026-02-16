@@ -1,0 +1,51 @@
+meta {
+  name: /api/mms/Testers/:testerId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Testers/:testerId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  testerId: 3727802
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Testers/:testerId
+    method: GET
+    mode: none
+    params:path: {
+      testerId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

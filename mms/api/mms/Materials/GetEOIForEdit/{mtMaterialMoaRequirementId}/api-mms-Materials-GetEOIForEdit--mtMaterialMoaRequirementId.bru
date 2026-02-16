@@ -1,0 +1,50 @@
+meta {
+  name: /api/mms/Materials/GetEOIForEdit/:mtMaterialMoaRequirementId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/mms/Materials/GetEOIForEdit/:mtMaterialMoaRequirementId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  mtMaterialMoaRequirementId: 698
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Materials/GetEOIForEdit/:mtMaterialMoaRequirementId
+    method: GET
+    mode: none
+    params:path: {
+      mtMaterialMoaRequirementId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

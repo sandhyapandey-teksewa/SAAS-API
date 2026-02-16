@@ -1,0 +1,51 @@
+meta {
+  name: /api/mms/Certifications/:certificationId
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mmsUrl}}/api/mms/Certifications/:certificationId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  certificationId: 3722665
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Certifications/:certificationId
+    method: GET
+    mode: none
+    params:path: {
+      certificationId: 698
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

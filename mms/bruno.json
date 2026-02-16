@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "mms",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

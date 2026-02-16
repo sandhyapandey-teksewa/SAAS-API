@@ -1,0 +1,239 @@
+meta {
+  name: /api/mms/Sample/SaveCustody
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/mms/Sample/SaveCustody
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mtCustodyId": 9262,
+    "custodyStatus": 5968,
+    "custodyStatusedsc": "string",
+    "custodyFrom": "string",
+    "currentLocation": "string",
+    "deliveryMethod": "string",
+    "carrierPackageId": 6646,
+    "sampleCondition": 8330,
+    "sampleConditionDesc": "string",
+    "note": "string",
+    "labelId": "string",
+    "mtSampleId": 4779,
+    "enteredBy": "string",
+    "nonDisposableInd": "string",
+    "destinationLab": "string",
+    "smDocumentId": 4578,
+    "createDate": "2011-05-22T00:06:03.128Z",
+    "document": {
+      "smDocumentId": 7545,
+      "cmSubcontractId": 7301,
+      "documentTypeCd": 7997,
+      "documentDescription": "string",
+      "documentName": "string",
+      "cmChangeOrderId": 306,
+      "fileName": "string",
+      "cmLedgerEntryId": 9556,
+      "repositoryDocumentId": 3717,
+      "cmLedgerItemId": 2635,
+      "ebBidCertificationId": 6352,
+      "mtApprovalId": 4271,
+      "cmDiaryId": 230,
+      "mtTestId": 4549,
+      "cmCertificateId": 1969,
+      "cmRequestForInformationId": 8317,
+      "cmFinalizationId": 519,
+      "cmSubcontractPaymentId": 7653,
+      "cmSubcontractDbeId": 1517,
+      "paymentNumber": 1973,
+      "paymentReceivedDate": "1974-05-23T11:56:01.036Z",
+      "overrideAmount": 7523.379816179574,
+      "comments": "string",
+      "rowid": "ba0ab753-692b-9ea3-1dc0-b3545f94c642",
+      "smCompanyReceiptId": 7127,
+      "geoLatitude": 5411.638088403969,
+      "geoLongitude": 7823.22004679242,
+      "ebContractId": 2497,
+      "smCompanyApplicationId": 9966,
+      "smDomainId": 3686,
+      "mtMaterialId": 5005,
+      "mtSurveyId": 9975,
+      "mtTestResponseId": 2588,
+      "crsContractWageRateId": 5777,
+      "smApplicationObjectId": 4615,
+      "ebContract": 4037,
+      "ebFilterContractId": 8971,
+      "contractVersionProposalId": 9837,
+      "contractVersionProposalOtherId": 5026,
+      "metadata": "string",
+      "ebAddendumId": 4441,
+      "sequenceNumber": 817,
+      "requestContractorChecklistId": 6094,
+      "responseContractorChecklistId": 493,
+      "bidContractDraftId": 6328,
+      "bidContractOtherId": 9785,
+      "ebBidAwardReviewId": 936,
+      "ebContractBondId": 9664,
+      "ebContractInsuranceId": 7016,
+      "uploadedBy": "string",
+      "affiliation": "string",
+      "inclusionTypeCd": 2668,
+      "documentLocationTypeCd": 4282,
+      "mtMixDesignId": 6003,
+      "mode": "string",
+      "boxFileId": "string",
+      "boxFilePath": "string",
+      "status": "string",
+      "createdBy": "string",
+      "createDate": "1956-09-07T10:02:38.000Z",
+      "lastUpdateDate": "1999-11-14T08:05:46.179Z",
+      "lastUpdateBy": "string",
+      "versionNumber": 2814,
+      "documentTypeCdNavigation": {
+        "smDomainCodeCd": 7328,
+        "value": "string",
+        "description": "string",
+        "longDescription": "string",
+        "codeTypeCd": 2835
+      },
+      "domainCodeDescription": "string",
+      "isNew": false
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/mms/Sample/SaveCustody
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "mtCustodyId": 9262,
+        "custodyStatus": 5968,
+        "custodyStatusedsc": "string",
+        "custodyFrom": "string",
+        "currentLocation": "string",
+        "deliveryMethod": "string",
+        "carrierPackageId": 6646,
+        "sampleCondition": 8330,
+        "sampleConditionDesc": "string",
+        "note": "string",
+        "labelId": "string",
+        "mtSampleId": 4779,
+        "enteredBy": "string",
+        "nonDisposableInd": "string",
+        "destinationLab": "string",
+        "smDocumentId": 4578,
+        "createDate": "2011-05-22T00:06:03.128Z",
+        "document": {
+          "smDocumentId": 7545,
+          "cmSubcontractId": 7301,
+          "documentTypeCd": 7997,
+          "documentDescription": "string",
+          "documentName": "string",
+          "cmChangeOrderId": 306,
+          "fileName": "string",
+          "cmLedgerEntryId": 9556,
+          "repositoryDocumentId": 3717,
+          "cmLedgerItemId": 2635,
+          "ebBidCertificationId": 6352,
+          "mtApprovalId": 4271,
+          "cmDiaryId": 230,
+          "mtTestId": 4549,
+          "cmCertificateId": 1969,
+          "cmRequestForInformationId": 8317,
+          "cmFinalizationId": 519,
+          "cmSubcontractPaymentId": 7653,
+          "cmSubcontractDbeId": 1517,
+          "paymentNumber": 1973,
+          "paymentReceivedDate": "1974-05-23T11:56:01.036Z",
+          "overrideAmount": 7523.379816179574,
+          "comments": "string",
+          "rowid": "ba0ab753-692b-9ea3-1dc0-b3545f94c642",
+          "smCompanyReceiptId": 7127,
+          "geoLatitude": 5411.638088403969,
+          "geoLongitude": 7823.22004679242,
+          "ebContractId": 2497,
+          "smCompanyApplicationId": 9966,
+          "smDomainId": 3686,
+          "mtMaterialId": 5005,
+          "mtSurveyId": 9975,
+          "mtTestResponseId": 2588,
+          "crsContractWageRateId": 5777,
+          "smApplicationObjectId": 4615,
+          "ebContract": 4037,
+          "ebFilterContractId": 8971,
+          "contractVersionProposalId": 9837,
+          "contractVersionProposalOtherId": 5026,
+          "metadata": "string",
+          "ebAddendumId": 4441,
+          "sequenceNumber": 817,
+          "requestContractorChecklistId": 6094,
+          "responseContractorChecklistId": 493,
+          "bidContractDraftId": 6328,
+          "bidContractOtherId": 9785,
+          "ebBidAwardReviewId": 936,
+          "ebContractBondId": 9664,
+          "ebContractInsuranceId": 7016,
+          "uploadedBy": "string",
+          "affiliation": "string",
+          "inclusionTypeCd": 2668,
+          "documentLocationTypeCd": 4282,
+          "mtMixDesignId": 6003,
+          "mode": "string",
+          "boxFileId": "string",
+          "boxFilePath": "string",
+          "status": "string",
+          "createdBy": "string",
+          "createDate": "1956-09-07T10:02:38.000Z",
+          "lastUpdateDate": "1999-11-14T08:05:46.179Z",
+          "lastUpdateBy": "string",
+          "versionNumber": 2814,
+          "documentTypeCdNavigation": {
+            "smDomainCodeCd": 7328,
+            "value": "string",
+            "description": "string",
+            "longDescription": "string",
+            "codeTypeCd": 2835
+          },
+          "domainCodeDescription": "string",
+          "isNew": false
+        }
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

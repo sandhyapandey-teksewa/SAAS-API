@@ -5,17 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Equipment/DeleteEquipmentDetails/:equipmentId
+  url: {{mmsUrl}}/api/mms/Equipment/DeleteEquipmentDetails/:equipmentId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  equipmentId: 698
+  equipmentId: 941415710
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

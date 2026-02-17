@@ -7,15 +7,20 @@ meta {
 post {
   url: {{mmsUrl}}/api/mms/Facility/DeleteFacility/:facilityId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
   facilityId: 941374610
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

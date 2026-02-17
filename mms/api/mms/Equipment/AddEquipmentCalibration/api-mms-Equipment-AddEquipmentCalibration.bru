@@ -5,18 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Equipment/AddEquipmentCalibration
+  url: {{mmsUrl}}/api/mms/Equipment/AddEquipmentCalibration
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
   MtSurveyRequirementId: 3283
-  SmEquipmentId: 1611
+  SmEquipmentId: 939388510
   SmFacilityId: 9332
   MtSurveyId: 4727
   CalibrationName: string
@@ -30,6 +34,7 @@ body:multipart-form {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

@@ -5,13 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Equipment/All
+  url: {{mmsUrl}}/api/mms/Equipment/All
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

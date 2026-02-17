@@ -7,11 +7,16 @@ meta {
 get {
   url: {{mmsUrl}}/api/mms/Facility/GetInspectionForDropdown
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

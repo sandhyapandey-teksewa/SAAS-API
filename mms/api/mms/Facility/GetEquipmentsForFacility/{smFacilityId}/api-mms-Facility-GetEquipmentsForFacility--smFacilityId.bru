@@ -7,15 +7,20 @@ meta {
 get {
   url: {{mmsUrl}}/api/mms/Facility/GetEquipmentsForFacility/:smFacilityId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
   smFacilityId: 937913048
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

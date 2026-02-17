@@ -5,22 +5,26 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentCalibrations
+  url: {{mmsUrl}}/api/mms/Equipment/SaveEquipmentCalibrations
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   [
     {
-      "equipmentId": 2297,
-      "mtSurveyId": 7925,
-      "smFacilityId": 5248,
-      "mtSurveyRequirementId": 4178,
+      "equipmentId": 939388510,
+      "mtSurveyId": null,
+      "smFacilityId": null,
+      "mtSurveyRequirementId": 939389510,
       "testTypeCd": 3405,
       "surveyName": "string",
       "method": "string",
@@ -28,22 +32,22 @@ body:json {
       "frequencType": "string",
       "frequencTypeUom": "string",
       "testTypeString": "string",
-      "frequencTypeCd": 9387,
+      "frequencTypeCd": 64,
       "frequencTypeUomCd": 1705,
       "comments": "string",
-      "requiredInd": "string",
+      "requiredInd": "N",
       "updated": true,
       "new": true
     },
     {
-      "equipmentId": 5901,
+      "equipmentId": 939388510,
       "mtSurveyId": 5660,
       "smFacilityId": 434,
-      "mtSurveyRequirementId": 2645,
+      "mtSurveyRequirementId": 939388510,
       "testTypeCd": 161,
       "surveyName": "string",
       "method": "string",
-      "frequencyAmount": 1050.9278184225889,
+      "frequencyAmount": 9.0,
       "frequencType": "string",
       "frequencTypeUom": "string",
       "testTypeString": "string",
@@ -59,6 +63,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

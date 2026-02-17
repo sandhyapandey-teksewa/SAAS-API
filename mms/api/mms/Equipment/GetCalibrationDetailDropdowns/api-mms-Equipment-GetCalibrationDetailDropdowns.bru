@@ -5,13 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Equipment/GetCalibrationDetailDropdowns
+  url: {{mmsUrl}}/api/mms/Equipment/GetCalibrationDetailDropdowns
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

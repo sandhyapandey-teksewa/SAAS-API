@@ -7,11 +7,15 @@ meta {
 post {
   url: {{mmsUrl}}/api/mms/Facility/SaveFacility
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 body:json {
@@ -29019,6 +29023,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

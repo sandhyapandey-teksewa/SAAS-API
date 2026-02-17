@@ -5,17 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Equipment/RemoveCalibrationOrMaintenance/:mtSurveyRequirementId
+  url: {{mmsUrl}}/api/mms/Equipment/RemoveCalibrationOrMaintenance/:mtSurveyRequirementId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtSurveyRequirementId: 698
+  mtSurveyRequirementId: 939389511
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

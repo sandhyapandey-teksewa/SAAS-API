@@ -5,13 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Equipment/GetTestersDropdown
+  url: {{mmsUrl}}/api/mms/Equipment/GetTestersDropdown
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

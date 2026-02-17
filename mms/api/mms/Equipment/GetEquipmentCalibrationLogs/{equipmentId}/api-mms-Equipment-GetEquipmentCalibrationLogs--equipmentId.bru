@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Equipment/GetEquipmentCalibrationLogs/:equipmentId
+  url: {{mmsUrl}}/api/mms/Equipment/GetEquipmentCalibrationLogs/:equipmentId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  equipmentId: 698
+  equipmentId: 939388510
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

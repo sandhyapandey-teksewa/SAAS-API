@@ -5,21 +5,25 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Equipment/SaveEquipmentDetails
+  url: {{mmsUrl}}/api/mms/Equipment/SaveEquipmentDetails
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "equipmentId": 5943,
-    "equipmentName": "string",
-    "description": "string",
-    "stateId": "string",
+    "equipmentId": 4594724,
+    "equipmentName": "Testing Equipment",
+    "description": "Adding a description in the equipment",
+    "stateId": "S-12",
     "purchaseDate": "2013-01-09T07:45:30.001Z",
     "disposalDate": "1975-01-02T05:33:35.340Z",
     "calibrationDate": "1982-03-20T08:33:38.934Z",
@@ -195,6 +199,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

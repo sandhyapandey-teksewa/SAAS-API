@@ -5,24 +5,29 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Home/test
+  url: {{mmsUrl}}/api/mms/Home/test
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "username": "string",
-    "email": "string"
+    "username": "Sandhya-test",
+    "email": "sandhyapandey@teksewa.com"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

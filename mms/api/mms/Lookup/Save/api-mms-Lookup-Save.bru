@@ -5,36 +5,41 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Lookup/Save
+  url: {{mmsUrl}}/api/mms/Lookup/Save
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
-  MtLookupId: 4067
-  Name: string
-  EffectiveDate: 1969-09-13T19:39:59.247Z
-  ExpirationDate: 2003-05-10T02:29:12.439Z
-  ValueDataTypeCd: 1051
-  ValueDataType: string
-  ValueQuestionText: string
-  ParentLookupId: 5863
-  ValueName: string
-  ExportData: string
-  ImportReferenceId: 3497
+  MtLookupId: 937881441
+  Name: QA Test
+  EffectiveDate: 2025-06-30T18:00:00
+  ExpirationDate: 2029-08-01T00:00:00
+  ValueDataTypeCd: 4509175
+  ValueDataType: DECIMAL
+  ValueQuestionText: value of sine"
+  ParentLookupId: null
+  ValueName: QA
+  ExportData: null
+  ImportReferenceId: null
   MtLookupKeys: [object Object],[object Object]
-  LookupVersionNumber: 6026
-  IsLatestVersion: false
-  IsEditable: false
-  VersionInformation: string
+  LookupVersionNumber: 1
+  IsLatestVersion: true
+  IsEditable: true
+  VersionInformation: 
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

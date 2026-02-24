@@ -5,13 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Samples/GridStateFilters
+  url: {{mmsUrl}}/api/mms/Samples/GridStateFilters
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

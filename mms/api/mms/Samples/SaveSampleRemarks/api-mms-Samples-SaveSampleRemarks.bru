@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Samples/SaveSampleRemarks
+  url: {{mmsUrl}}/api/mms/Samples/SaveSampleRemarks
   body: json
   auth: inherit
 }
@@ -16,13 +16,14 @@ headers {
 
 body:json {
   {
-    "sampleId": 3832,
-    "description": "string"
+    "sampleId": 941530210,
+    "description": "Adding sample throgh postman"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

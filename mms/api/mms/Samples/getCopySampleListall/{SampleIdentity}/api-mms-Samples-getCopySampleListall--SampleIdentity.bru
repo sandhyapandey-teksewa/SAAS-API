@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Samples/getCopySampleListall/:SampleIdentity
+  url: {{mmsUrl}}/api/mms/Samples/getCopySampleListall/:SampleIdentity
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  SampleIdentity: string
+  SampleIdentity: W-0007-2026
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

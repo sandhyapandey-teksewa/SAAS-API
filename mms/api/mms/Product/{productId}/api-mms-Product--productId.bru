@@ -7,20 +7,15 @@ meta {
 get {
   url: {{mmsUrl}}/api/mms/Product/:productId
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:path {
-  productId: 3724201
-}
-
-auth:bearer {
-  token: {{bearerToken}}
+  productId: 3727701
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
 
 example {

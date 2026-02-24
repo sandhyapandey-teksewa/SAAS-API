@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/bins/bin-grid/:mtMixDesignId
+  url: {{mmsUrl}}/api/mms/MixDesign/bins/bin-grid/:mtMixDesignId
   body: none
   auth: inherit
 }
@@ -16,6 +16,7 @@ params:path {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

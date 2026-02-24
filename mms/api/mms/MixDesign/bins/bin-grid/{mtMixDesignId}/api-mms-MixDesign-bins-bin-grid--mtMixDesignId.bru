@@ -7,11 +7,15 @@ meta {
 get {
   url: {{mmsUrl}}/api/mms/MixDesign/bins/bin-grid/:mtMixDesignId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
   mtMixDesignId: 698
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {

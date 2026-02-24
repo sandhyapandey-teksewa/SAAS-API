@@ -5,23 +5,28 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/select/tests/:mtMixDesignId?searchText=&searchId=0&src=MIXDESIGN_AGG
+  url: {{mmsUrl}}/api/mms/MixDesign/select/tests/:mtMixDesignId?searchText=Thickness & Voids&searchId=0&src=MIXDESIGN_AGG
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
-  searchText: 
+  searchText: Thickness & Voids
   searchId: 0
   src: MIXDESIGN_AGG
 }
 
 params:path {
-  mtMixDesignId: 698
+  mtMixDesignId: 937918163
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

@@ -5,26 +5,30 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/bins/update
+  url: {{mmsUrl}}/api/mms/MixDesign/bins/update
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "mtMixDesignId": 2503,
+    "mtMixDesignId": 937918163,
     "bins": [
       {
-        "mtTestId": 7982,
+        "mtTestId": 941530812,
         "designSampleId": 3542,
-        "binName": "string",
+        "binName": "M-ADd",
         "testResponses": [
           {
-            "mtSurveyQuestionId": 5213,
+            "mtSurveyQuestionId": 937918339,
             "mtTestId": 2933,
             "response": "string",
             "responseId": 1132
@@ -62,6 +66,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

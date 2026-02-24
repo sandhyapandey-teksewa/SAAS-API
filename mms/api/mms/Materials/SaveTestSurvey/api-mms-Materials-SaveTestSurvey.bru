@@ -5,30 +5,35 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Materials/SaveTestSurvey
+  url: {{mmsUrl}}/api/mms/Materials/SaveTestSurvey
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
-  MtSurveyRequirementId: 429
-  MtMaterialId: 6063
-  MtSurveyId: 6878
-  TestName: string
-  TestFrequencyCd: 6219
-  TestFrequencyUomCd: 2716
+  MtSurveyRequirementId: 3729517
+  MtMaterialId: 5951355
+  MtSurveyId: 937816011
+  TestName: (trial 1T) Paint Sandhya
+  TestFrequencyCd: 64
+  TestFrequencyUomCd: 4387284
   FrequencyAmount: 8031.148688879081
   RequiredInd: false
-  Comments: string
+  Comments: updating test survey
   QuestionAndResponses: [object Object],[object Object]
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

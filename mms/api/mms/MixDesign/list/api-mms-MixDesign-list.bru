@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/list?activeOnly=true
+  url: {{mmsUrl}}/api/mms/MixDesign/list?activeOnly=true
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
   activeOnly: true
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

@@ -5,17 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Materials/RemoveTest/:mtSurveyRequirementId
+  url: {{mmsUrl}}/api/mms/Materials/RemoveTest/:mtSurveyRequirementId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtSurveyRequirementId: 698
+  mtSurveyRequirementId: 5710255
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

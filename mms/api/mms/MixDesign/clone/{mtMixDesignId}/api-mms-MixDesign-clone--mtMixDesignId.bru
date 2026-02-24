@@ -5,17 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/clone/:mtMixDesignId
+  url: {{mmsUrl}}/api/mms/MixDesign/clone/:mtMixDesignId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtMixDesignId: 698
+  mtMixDesignId: 937918161
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

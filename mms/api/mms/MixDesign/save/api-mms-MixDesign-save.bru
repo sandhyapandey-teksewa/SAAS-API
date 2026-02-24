@@ -5,33 +5,38 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/save
+  url: {{mmsUrl}}/api/mms/MixDesign/save
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "mtMixDesignId": 8452,
-    "name": "string",
-    "effectiveDate": "1963-04-13T06:37:48.518Z",
-    "expirationDate": "1971-09-21T16:32:19.380Z",
+    "mtMixDesignId": 937918161,
+    "name": "Test mix design",
+    "effectiveDate": "2026-01-19T00:00:00",
+    "expirationDate": "2027-12-19T00:00:00",
     "defaultPrintInd": false,
-    "versionNumber": 9305,
-    "associatedSurveyId": 3449,
+    "versionNumber": 1,
+    "associatedSurveyId": null,
     "templateInd": false,
     "isEditable": true,
-    "infoMessage": "string",
-    "mtSurveyId": 2612
+    "infoMessage": "Tested by postman",
+    "mtSurveyId": 937918212
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

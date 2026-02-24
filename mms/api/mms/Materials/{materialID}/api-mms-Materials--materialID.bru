@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Materials/:materialID
+  url: {{mmsUrl}}/api/mms/Materials/:materialID
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  materialID: 698
+  materialID: 5951355
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

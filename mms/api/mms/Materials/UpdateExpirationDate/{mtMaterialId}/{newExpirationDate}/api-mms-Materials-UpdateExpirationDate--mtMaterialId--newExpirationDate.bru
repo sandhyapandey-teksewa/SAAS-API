@@ -5,18 +5,23 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Materials/UpdateExpirationDate/:mtMaterialId/:newExpirationDate
+  url: {{mmsUrl}}/api/mms/Materials/UpdateExpirationDate/:mtMaterialId/:newExpirationDate
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtMaterialId: 698
-  newExpirationDate: 1984-02-10T06:49:11.590Z
+  mtMaterialId: 5951355
+  newExpirationDate: 2027-12-30T06:49:11.590Z
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

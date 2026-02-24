@@ -5,22 +5,26 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/variable/save
+  url: {{mmsUrl}}/api/mms/MixDesign/variable/save
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "mtMixDesignVariableId": 9716,
-    "mtMixDesignId": 8066,
+    "mtMixDesignVariableId": 937914400,
+    "mtMixDesignId": 937918163,
     "batchVariableCd": 1584,
     "testValue": "string",
-    "mtSurveyId": 6324,
+    "mtSurveyId": 937918212,
     "mtSurveyQuestionId": 5773,
     "mtSampleId": 6520,
     "retrieveTestValueInd": true,
@@ -32,6 +36,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

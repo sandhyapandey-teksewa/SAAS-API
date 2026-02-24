@@ -5,35 +5,71 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Configuration/sampletemplate/save
+  url: {{mmsUrl}}/api/mms/Configuration/sampletemplate/save
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "sampleTemplateId": 7110,
-    "templateName": "string",
+    "sampleTemplateId": 5,
+    "templateName": "Sandhya",
     "isActive": true,
-    "templateAbbreviation": "string",
-    "entitySchemeId": 5138,
+    "templateAbbreviation": "SANDHYA",
+    "entitySchemeId": 5,
     "sampleTemplateDetails": [
-      {
-        "sampleColumnName": "string"
-      },
-      {
-        "sampleColumnName": "string"
-      }
+       {
+          "sampleColumnName": "MT_MATERIAL_P"
+        },
+        {
+          "sampleColumnName": "ITEM_P"
+        },
+        {
+          "sampleColumnName": "CONTRACT_P"
+        },
+        {
+          "sampleColumnName": "SAMPLE_DATE"
+        },
+        {
+          "sampleColumnName": "DESCRIPTION"
+        },
+        {
+          "sampleColumnName": "STATION"
+        },
+        {
+          "sampleColumnName": "OFFSET"
+        },
+        {
+          "sampleColumnName": "SAMPLED_BY_P"
+        },
+        {
+          "sampleColumnName": "LOT"
+        },
+        {
+          "sampleColumnName": "PLANT"
+        },
+        {
+          "sampleColumnName": "SM_FACILITY_P"
+        },
+        {
+          "sampleColumnName": "ASPHALT_LOT"
+        }
+      
     ]
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

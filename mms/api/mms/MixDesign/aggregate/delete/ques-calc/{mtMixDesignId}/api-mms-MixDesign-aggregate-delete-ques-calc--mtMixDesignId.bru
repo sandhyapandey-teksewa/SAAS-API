@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/aggregate/delete/ques-calc/:mtMixDesignId
+  url: {{mmsUrl}}/api/mms/MixDesign/aggregate/delete/ques-calc/:mtMixDesignId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtMixDesignId: 698
+  mtMixDesignId: 937918167
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

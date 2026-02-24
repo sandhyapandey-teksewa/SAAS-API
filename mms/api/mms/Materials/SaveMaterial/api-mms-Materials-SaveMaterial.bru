@@ -5,47 +5,51 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Materials/SaveMaterial
+  url: {{mmsUrl}}/api/mms/Materials/SaveMaterial
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
-  MtMaterialId: 2451
-  MaterialNumber: string
-  Name: string
-  Description: string
-  UnitOfMeasureCd: 5297
-  CategoryCd: 7944
-  StatusCd: 62
-  Comments: string
-  CreatedBy: string
-  CreateDate: 1989-08-30T06:42:04.861Z
-  LastUpdateDate: 1959-09-25T18:42:21.219Z
-  LastUpdateBy: string
-  VersionNumber: 9496
-  TypeCd: 4839
-  Rowid: 71b28b81-7a3d-ec81-9cb6-48d9eaf226e5
-  EffectiveDate: 2009-07-01T14:00:29.812Z
-  ExpirationDate: 1958-09-08T15:53:59.114Z
-  SupplementalInd: string
-  SmDomainId: 1519
-  BuyAmericanInd: string
-  AremaInd: string
+  MtMaterialId: 5951355
+  MaterialNumber: 1234
+  Name: test material 1
+  Description: adding decription
+  UnitOfMeasureCd: 4143921
+  CategoryCd: 11
+  StatusCd: 980
+  Comments: Add comment
+  CreatedBy: Sandhya
+  CreateDate: 2025-08-30T06:42:04.861Z
+  LastUpdateDate: 2030-09-25T18:42:21.219Z
+  LastUpdateBy: test sp
+  VersionNumber: 3
+  TypeCd: 44
+  Rowid: 3a82c593-eda6-402b-b437-d5c7af538ea5
+  EffectiveDate: 2023-06-12T22:00:00
+  ExpirationDate: 2030-09-08T15:53:59.114Z
+  SupplementalInd: N
+  SmDomainId: 4196416
+  BuyAmericanInd: N
+  AremaInd: N
   BuyAmericanEffectiveDate: 2001-06-03T16:47:35.711Z
-  BuyAmericanExpirationDate: 1984-04-10T01:48:29.999Z
+  BuyAmericanExpirationDate: 2027-04-10T01:48:29.999Z
   AremaEffectiveDate: 1989-10-02T09:02:01.278Z
-  AremaExpirationDate: 1969-12-21T13:58:41.373Z
+  AremaExpirationDate: 2030-12-21T13:58:41.373Z
   Specifications: string
   SampleDefiniton: string
-  ExperimentalInd: string
-  IncludeMmiInd: string
-  GroupCd: 8647
-  ContainerCd: 5279
+  ExperimentalInd: N
+  IncludeMmiInd: add
+  GroupCd: 88
+  ContainerCd: 5
   MaterialDesignReferenceId: 8982
   ConversionQuantity: 2465.6647396501285
   ParentMaterialId: 9955
@@ -53,7 +57,7 @@ body:multipart-form {
   MaterialDetailVersionNumber: 2193
   MaterialDetailInformation: string
   IsLatestVersion: true
-  MoaJson: string
+  MoaJson: null
   MtMoaAssignements: [object Object],[object Object],[object Object],[object Object]
   Assemblies: [object Object],[object Object]
   StandardItems: [object Object],[object Object]
@@ -63,6 +67,7 @@ body:multipart-form {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

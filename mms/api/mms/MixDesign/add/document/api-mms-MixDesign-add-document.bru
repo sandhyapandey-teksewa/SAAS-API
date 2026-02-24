@@ -5,35 +5,40 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/add/document
+  url: {{mmsUrl}}/api/mms/MixDesign/add/document
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
     "documents": [
       {
-        "boxFileId": "string",
-        "boxFilePath": "string",
-        "fileName": "string"
+        "boxFileId": "802",
+        "boxFilePath": "671",
+        "fileName": "Testing file"
       },
       {
-        "boxFileId": "string",
-        "boxFilePath": "string",
-        "fileName": "string"
+        "boxFileId": "882",
+        "boxFilePath": "671",
+        "fileName": "Test"
       }
     ],
-    "mtMixDesignId": 9380
+    "mtMixDesignId": 937918163
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/attribute/:mtMixDesignPropertyId
+  url: {{mmsUrl}}/api/mms/MixDesign/attribute/:mtMixDesignPropertyId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtMixDesignPropertyId: 698
+  mtMixDesignPropertyId: 937920083
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

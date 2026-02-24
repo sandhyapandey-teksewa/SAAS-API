@@ -5,22 +5,26 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/tests/save
+  url: {{mmsUrl}}/api/mms/MixDesign/tests/save
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
-  MtMixDesignId: 7263
-  MtSurveyRequirementId: 8637
-  MtSurveyId: 9456
-  Comments: string
-  TestFrequencyCd: 6474
-  TestFrequencyUomCd: 3180
+  MtMixDesignId: 937918167
+  MtSurveyRequirementId: 941416011
+  MtSurveyId: 4130082
+  Comments: Updating tests
+  TestFrequencyCd: null
+  TestFrequencyUomCd: null
   FrequencyAmount: 3818.5921432142745
   RequiredInd: true
   IsEditable: true
@@ -29,6 +33,7 @@ body:multipart-form {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

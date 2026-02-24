@@ -5,31 +5,36 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/MixDesign/attribute/save
+  url: {{mmsUrl}}/api/mms/MixDesign/attribute/save
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "mtMixDesignPropertyId": 1759,
-    "mtMixDesignId": 4777,
-    "name": "string",
-    "value": "string",
+    "mtMixDesignPropertyId": 937920083,
+    "mtMixDesignId": 937918163,
+    "name": "QA Sandhya",
+    "value": "323",
     "printInd": true,
-    "valueSourceCd": 8381,
-    "valueSourceListCd": 9114,
-    "valueCd": 9624,
+    "valueSourceCd": 4509188,
+    "valueSourceListCd": null,
+    "valueCd": null,
     "isEditable": true
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

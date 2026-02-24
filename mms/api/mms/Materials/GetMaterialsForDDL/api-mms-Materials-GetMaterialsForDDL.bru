@@ -5,19 +5,24 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Materials/GetMaterialsForDDL?searchText=&searchId=0&isActive=false
+  url: {{mmsUrl}}/api/mms/Materials/GetMaterialsForDDL?searchText&searchId=5951355&isActive=true
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
   searchText: 
-  searchId: 0
-  isActive: false
+  searchId: 5951355
+  isActive: true
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

@@ -5,18 +5,23 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/MixDesign/aggregate/calculation/byid/:mtMixDesignId/:calculationId
+  url: {{mmsUrl}}/api/mms/MixDesign/aggregate/calculation/byid/:mtMixDesignId/:calculationId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtMixDesignId: 698
+  mtMixDesignId: 937918167
   calculationId: 698
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

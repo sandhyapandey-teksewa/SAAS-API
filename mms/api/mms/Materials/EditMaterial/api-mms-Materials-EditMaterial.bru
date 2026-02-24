@@ -5,19 +5,23 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Materials/EditMaterial
+  url: {{mmsUrl}}/api/mms/Materials/EditMaterial
   body: multipartForm
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:multipart-form {
-  MtMaterialId: 2451
-  MaterialNumber: string
-  Name: string
+  MtMaterialId: 5951355
+  MaterialNumber: 1234
+  Name: test material test
   Description: string
   UnitOfMeasureCd: 5297
   CategoryCd: 7944
@@ -31,15 +35,15 @@ body:multipart-form {
   TypeCd: 4839
   Rowid: 71b28b81-7a3d-ec81-9cb6-48d9eaf226e5
   EffectiveDate: 2009-07-01T14:00:29.812Z
-  ExpirationDate: 1958-09-08T15:53:59.114Z
+  ExpirationDate: 2030-09-08T15:53:59.114Z
   SupplementalInd: string
   SmDomainId: 1519
   BuyAmericanInd: string
   AremaInd: string
   BuyAmericanEffectiveDate: 2001-06-03T16:47:35.711Z
-  BuyAmericanExpirationDate: 1984-04-10T01:48:29.999Z
+  BuyAmericanExpirationDate: 2030-04-10T01:48:29.999Z
   AremaEffectiveDate: 1989-10-02T09:02:01.278Z
-  AremaExpirationDate: 1969-12-21T13:58:41.373Z
+  AremaExpirationDate: 2030-12-21T13:58:41.373Z
   Specifications: string
   SampleDefiniton: string
   ExperimentalInd: string
@@ -63,6 +67,7 @@ body:multipart-form {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

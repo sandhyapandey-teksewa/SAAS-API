@@ -5,17 +5,22 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/SampleWF/test/approval/reset/:mtTestId
+  url: {{mmsUrl}}/api/mms/SampleWF/test/approval/reset/:mtTestId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  mtTestId: 698
+  mtTestId: 941541610
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

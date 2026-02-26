@@ -5,9 +5,9 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Sample/AddAssuranceTest/:TestId?isRetest=true
+  url: {{mmsUrl}}/api/mms/Sample/AddAssuranceTest/:TestId?isRetest=true
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
@@ -15,11 +15,16 @@ params:query {
 }
 
 params:path {
-  TestId: 698
+  TestId: 941541610
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

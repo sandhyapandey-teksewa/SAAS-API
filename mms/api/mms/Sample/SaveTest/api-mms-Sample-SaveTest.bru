@@ -5,23 +5,27 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Sample/SaveTest
+  url: {{mmsUrl}}/api/mms/Sample/SaveTest
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   [
     {
       "surveyType": "string",
-      "mtTestId": 7632,
+      "mtTestId": 941537710,
       "mixDesignId": 9193,
-      "mtSurveyId": 1552,
-      "mtSampleId": 4448,
+      "mtSurveyId": 4172295,
+      "mtSampleId": 941537510,
       "testActualDate": "1969-01-22T07:24:54.872Z",
       "mtTesterProfileId": 5284,
       "testSmFacilityId": 670,
@@ -1075,6 +1079,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

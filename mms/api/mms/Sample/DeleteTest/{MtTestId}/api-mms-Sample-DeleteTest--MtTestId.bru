@@ -5,17 +5,22 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Sample/DeleteTest/:MtTestId
+  url: {{mmsUrl}}/api/mms/Sample/DeleteTest/:MtTestId
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:path {
-  MtTestId: 698
+  MtTestId: 941537810
+}
+
+auth:bearer {
+  token: {{bearerToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

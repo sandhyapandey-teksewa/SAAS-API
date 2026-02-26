@@ -5,9 +5,9 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/mms/Common/FrequencyUomByType/:smDomainCodeCd?searchText=&searchId=0
+  url: {{mmsUrl}}/api/mms/Common/FrequencyUomByType/:smDomainCodeCd?searchText=&searchId=0
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
@@ -19,8 +19,13 @@ params:path {
   smDomainCodeCd: 698
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

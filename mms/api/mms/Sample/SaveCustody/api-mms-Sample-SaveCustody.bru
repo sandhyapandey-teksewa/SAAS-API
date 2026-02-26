@@ -5,38 +5,42 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/mms/Sample/SaveCustody
+  url: {{mmsUrl}}/api/mms/Sample/SaveCustody
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
 }
 
+auth:bearer {
+  token: {{bearerToken}}
+}
+
 body:json {
   {
-    "mtCustodyId": 9262,
-    "custodyStatus": 5968,
-    "custodyStatusedsc": "string",
-    "custodyFrom": "string",
-    "currentLocation": "string",
-    "deliveryMethod": "string",
-    "carrierPackageId": 6646,
-    "sampleCondition": 8330,
-    "sampleConditionDesc": "string",
-    "note": "string",
-    "labelId": "string",
-    "mtSampleId": 4779,
-    "enteredBy": "string",
-    "nonDisposableInd": "string",
+    "mtCustodyId": 3730010,
+    "custodyStatus": 5680537,
+    "custodyStatusedsc": "Stored",
+    "custodyFrom": "SAAS",
+    "currentLocation": "Dallas",
+    "deliveryMethod": "COD",
+    "carrierPackageId": 12,
+    "sampleCondition": 5680529,
+    "sampleConditionDesc": "Acceptable",
+    "note": "Adding custody",
+    "labelId": "null",
+    "mtSampleId": 941541410,
+    "enteredBy": "Punam Shrestha",
+    "nonDisposableInd": "N",
     "destinationLab": "string",
-    "smDocumentId": 4578,
-    "createDate": "2011-05-22T00:06:03.128Z",
+    "smDocumentId": 941541410,
+    "createDate": "2026-02-25T19:11:09.5670955Z",
     "document": {
-      "smDocumentId": 7545,
-      "cmSubcontractId": 7301,
-      "documentTypeCd": 7997,
+      "smDocumentId": 941541410,
+      "cmSubcontractId": null,
+      "documentTypeCd": 0,
       "documentDescription": "string",
       "documentName": "string",
       "cmChangeOrderId": 306,
@@ -112,6 +116,7 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
 
 example {

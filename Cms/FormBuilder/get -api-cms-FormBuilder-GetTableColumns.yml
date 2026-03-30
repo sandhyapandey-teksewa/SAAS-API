@@ -1,0 +1,62 @@
+info:
+  name: get /api/cms/FormBuilder/GetTableColumns
+  type: http
+  seq: 12
+  tags:
+    - FormBuilder
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/cms/FormBuilder/GetTableColumns"
+  params:
+    - name: tableName
+      value: ""
+      type: query
+      disabled: true
+    - name: domainId
+      value: ""
+      type: query
+      disabled: true
+    - name: syncId
+      value: ""
+      type: query
+      disabled: true
+    - name: excludeMapped
+      value: "false"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/api/cms/FormBuilder/GetTableColumns"
+      method: GET
+      params:
+        - name: tableName
+          value: ""
+          type: query
+          disabled: true
+        - name: domainId
+          value: ""
+          type: query
+          disabled: true
+        - name: syncId
+          value: ""
+          type: query
+          disabled: true
+        - name: excludeMapped
+          value: "false"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

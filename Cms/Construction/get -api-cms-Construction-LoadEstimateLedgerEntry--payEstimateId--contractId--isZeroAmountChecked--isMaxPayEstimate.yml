@@ -1,0 +1,58 @@
+info:
+  name: get /api/cms/Construction/LoadEstimateLedgerEntry/:payEstimateId/:contractId/:isZeroAmountChecked/:isMaxPayEstimate
+  type: http
+  seq: 72
+  tags:
+    - Construction
+
+http:
+  method: GET
+  url: "{{cmsUrl}}/api/cms/Construction/LoadEstimateLedgerEntry/:payEstimateId/:contractId/:isZeroAmountChecked/:isMaxPayEstimate"
+  params:
+    - name: payEstimateId
+      value: "0"
+      type: path
+    - name: contractId
+      value: "0"
+      type: path
+    - name: isZeroAmountChecked
+      value: "false"
+      type: path
+    - name: isMaxPayEstimate
+      value: "false"
+      type: path
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/api/cms/Construction/LoadEstimateLedgerEntry/:payEstimateId/:contractId/:isZeroAmountChecked/:isMaxPayEstimate"
+      method: GET
+      params:
+        - name: payEstimateId
+          value: ""
+          type: path
+        - name: contractId
+          value: ""
+          type: path
+        - name: isZeroAmountChecked
+          value: "false"
+          type: path
+        - name: isMaxPayEstimate
+          value: "false"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

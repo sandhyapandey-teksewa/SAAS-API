@@ -1,0 +1,332 @@
+info:
+  name: post /api/cms/Construction/SaveItemEntry
+  type: http
+  seq: 39
+  tags:
+    - Construction
+
+http:
+  method: POST
+  url: "{{cmsUrl}}/api/cms/Construction/SaveItemEntry"
+  body:
+    type: json
+    data: |-
+      {
+        "itemSummary": {
+          "ledgerItemId": 0,
+          "checkIndex": false,
+          "remarks": ""
+        },
+        "itemEntryGrid": [
+          {
+            "cmLedgerEntryId": 0,
+            "ledgerEntryTypeCd": 0,
+            "itemQuantity": 0,
+            "itemAmount": 0,
+            "ledgerEntryDate": "",
+            "checkedById": 0,
+            "paySequence": 0,
+            "cmPayEstimateId": 0,
+            "comment": "",
+            "uomString": "",
+            "createdBy": "",
+            "auditInd": "",
+            "checkedInd": "",
+            "payInd": "",
+            "status": "",
+            "disableColumnsIndex": false,
+            "smDocuments": [
+              {
+                "createdBy": "",
+                "createDate": "",
+                "lastUpdateDate": "",
+                "createDateUser": "",
+                "lastUpdateDateUser": "",
+                "lastUpdateBy": "",
+                "versionNumber": 0,
+                "smDocumentId": 0,
+                "cmSubcontractId": 0,
+                "documentTypeCd": 0,
+                "documentDescription": "",
+                "documentName": "",
+                "cmChangeOrderId": 0,
+                "fileName": "",
+                "cmLedgerEntryId": 0,
+                "repositoryDocumentId": 0,
+                "cmLedgerItemId": 0,
+                "ebBidCertificationId": 0,
+                "mtApprovalId": 0,
+                "cmDiaryId": 0,
+                "mtTestId": 0,
+                "cmCertificateId": 0,
+                "cmRequestForInformationId": 0,
+                "cmFinalizationId": 0,
+                "cmSubcontractPaymentId": 0,
+                "cmSubcontractDbeId": 0,
+                "paymentNumber": 0,
+                "paymentReceivedDate": "",
+                "overrideAmount": 0,
+                "comments": "",
+                "rowid": "",
+                "smCompanyReceiptId": 0,
+                "geoLatitude": 0,
+                "geoLongitude": 0,
+                "ebContractId": 0,
+                "smCompanyApplicationId": 0,
+                "smDomainId": 0,
+                "mtMaterialId": 0,
+                "mtSurveyId": 0,
+                "mtTestResponseId": 0,
+                "crsContractWageRateId": 0,
+                "smApplicationObjectId": 0,
+                "ebContract": 0,
+                "ebFilterContractId": 0,
+                "contractVersionProposalId": 0,
+                "contractVersionProposalOtherId": 0,
+                "metadata": "",
+                "ebAddendumId": 0,
+                "sequenceNumber": 0,
+                "requestContractorChecklistId": 0,
+                "responseContractorChecklistId": 0,
+                "bidContractDraftId": 0,
+                "bidContractOtherId": 0,
+                "ebBidAwardReviewId": 0,
+                "ebContractBondId": 0,
+                "ebContractInsuranceId": 0,
+                "uploadedBy": "",
+                "affiliation": "",
+                "inclusionTypeCd": 0,
+                "documentLocationTypeCd": 0,
+                "mtMixDesignId": 0,
+                "mode": "",
+                "boxFileId": "",
+                "boxFilePath": "",
+                "status": "",
+                "downloadUrl": "",
+                "documentTypeCdNavigation": {
+                  "smDomainCodeCd": 0,
+                  "value": "",
+                  "description": "",
+                  "longDescription": "",
+                  "lowRangeValue": 0,
+                  "highRangeValue": 0,
+                  "lowDateValue": "",
+                  "highDateValue": "",
+                  "extraDescription1": "",
+                  "extraDescription2": "",
+                  "startDate": "",
+                  "endDate": "",
+                  "startDateUser": "",
+                  "endDateUser": "",
+                  "createdBy": "",
+                  "createDate": "",
+                  "lastUpdateDate": "",
+                  "lastUpdateBy": "",
+                  "versionNumber": 0,
+                  "codeTypeCd": 0,
+                  "parentCategoryInd": "",
+                  "permitEditInd": "",
+                  "sortOrder": 0,
+                  "syncToVaultInd": "",
+                  "rowid": "",
+                  "customDecimal1": 0,
+                  "customDecimal2": 0,
+                  "customInteger1": 0,
+                  "customInteger2": 0,
+                  "smDomainId": 0,
+                  "lowRangeValueInd": "",
+                  "highRangeValueInd": "",
+                  "lowDateValueInd": "",
+                  "highDateValueInd": "",
+                  "extraDescription1Ind": "",
+                  "extraDescription2Ind": "",
+                  "customDecimal1Ind": "",
+                  "customDecimal2Ind": "",
+                  "customInteger1Ind": "",
+                  "customInteger2Ind": "",
+                  "staticCodeInd": "",
+                  "variableNumber": "",
+                  "hiddenInd": "",
+                  "lowDateValueUser": "",
+                  "highDateValueUser": "",
+                  "childCodes": []
+                },
+                "domainCodeDescription": "",
+                "isNew": false
+              }
+            ]
+          }
+        ],
+        "contractId": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/api/cms/Construction/SaveItemEntry"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "itemSummary": {
+              "ledgerItemId": 0,
+              "checkIndex": false,
+              "remarks": ""
+            },
+            "itemEntryGrid": [
+              {
+                "cmLedgerEntryId": 0,
+                "ledgerEntryTypeCd": 0,
+                "itemQuantity": 0,
+                "itemAmount": 0,
+                "ledgerEntryDate": "",
+                "checkedById": 0,
+                "paySequence": 0,
+                "cmPayEstimateId": 0,
+                "comment": "",
+                "uomString": "",
+                "createdBy": "",
+                "auditInd": "",
+                "checkedInd": "",
+                "payInd": "",
+                "status": "",
+                "disableColumnsIndex": false,
+                "smDocuments": [
+                  {
+                    "createdBy": "",
+                    "createDate": "",
+                    "lastUpdateDate": "",
+                    "createDateUser": "",
+                    "lastUpdateDateUser": "",
+                    "lastUpdateBy": "",
+                    "versionNumber": 0,
+                    "smDocumentId": 0,
+                    "cmSubcontractId": 0,
+                    "documentTypeCd": 0,
+                    "documentDescription": "",
+                    "documentName": "",
+                    "cmChangeOrderId": 0,
+                    "fileName": "",
+                    "cmLedgerEntryId": 0,
+                    "repositoryDocumentId": 0,
+                    "cmLedgerItemId": 0,
+                    "ebBidCertificationId": 0,
+                    "mtApprovalId": 0,
+                    "cmDiaryId": 0,
+                    "mtTestId": 0,
+                    "cmCertificateId": 0,
+                    "cmRequestForInformationId": 0,
+                    "cmFinalizationId": 0,
+                    "cmSubcontractPaymentId": 0,
+                    "cmSubcontractDbeId": 0,
+                    "paymentNumber": 0,
+                    "paymentReceivedDate": "",
+                    "overrideAmount": 0,
+                    "comments": "",
+                    "rowid": "",
+                    "smCompanyReceiptId": 0,
+                    "geoLatitude": 0,
+                    "geoLongitude": 0,
+                    "ebContractId": 0,
+                    "smCompanyApplicationId": 0,
+                    "smDomainId": 0,
+                    "mtMaterialId": 0,
+                    "mtSurveyId": 0,
+                    "mtTestResponseId": 0,
+                    "crsContractWageRateId": 0,
+                    "smApplicationObjectId": 0,
+                    "ebContract": 0,
+                    "ebFilterContractId": 0,
+                    "contractVersionProposalId": 0,
+                    "contractVersionProposalOtherId": 0,
+                    "metadata": "",
+                    "ebAddendumId": 0,
+                    "sequenceNumber": 0,
+                    "requestContractorChecklistId": 0,
+                    "responseContractorChecklistId": 0,
+                    "bidContractDraftId": 0,
+                    "bidContractOtherId": 0,
+                    "ebBidAwardReviewId": 0,
+                    "ebContractBondId": 0,
+                    "ebContractInsuranceId": 0,
+                    "uploadedBy": "",
+                    "affiliation": "",
+                    "inclusionTypeCd": 0,
+                    "documentLocationTypeCd": 0,
+                    "mtMixDesignId": 0,
+                    "mode": "",
+                    "boxFileId": "",
+                    "boxFilePath": "",
+                    "status": "",
+                    "downloadUrl": "",
+                    "documentTypeCdNavigation": {
+                      "smDomainCodeCd": 0,
+                      "value": "",
+                      "description": "",
+                      "longDescription": "",
+                      "lowRangeValue": 0,
+                      "highRangeValue": 0,
+                      "lowDateValue": "",
+                      "highDateValue": "",
+                      "extraDescription1": "",
+                      "extraDescription2": "",
+                      "startDate": "",
+                      "endDate": "",
+                      "startDateUser": "",
+                      "endDateUser": "",
+                      "createdBy": "",
+                      "createDate": "",
+                      "lastUpdateDate": "",
+                      "lastUpdateBy": "",
+                      "versionNumber": 0,
+                      "codeTypeCd": 0,
+                      "parentCategoryInd": "",
+                      "permitEditInd": "",
+                      "sortOrder": 0,
+                      "syncToVaultInd": "",
+                      "rowid": "",
+                      "customDecimal1": 0,
+                      "customDecimal2": 0,
+                      "customInteger1": 0,
+                      "customInteger2": 0,
+                      "smDomainId": 0,
+                      "lowRangeValueInd": "",
+                      "highRangeValueInd": "",
+                      "lowDateValueInd": "",
+                      "highDateValueInd": "",
+                      "extraDescription1Ind": "",
+                      "extraDescription2Ind": "",
+                      "customDecimal1Ind": "",
+                      "customDecimal2Ind": "",
+                      "customInteger1Ind": "",
+                      "customInteger2Ind": "",
+                      "staticCodeInd": "",
+                      "variableNumber": "",
+                      "hiddenInd": "",
+                      "lowDateValueUser": "",
+                      "highDateValueUser": "",
+                      "childCodes": []
+                    },
+                    "domainCodeDescription": "",
+                    "isNew": false
+                  }
+                ]
+              }
+            ],
+            "contractId": 0
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

@@ -1,0 +1,40 @@
+info:
+  name: get /api/cms/Construction/LoadItemGrid/:changeOrderCategoryId
+  type: http
+  seq: 70
+  tags:
+    - Construction
+
+http:
+  method: GET
+  url: "{{cmsUrl}}/api/cms/Construction/LoadItemGrid/:changeOrderCategoryId"
+  params:
+    - name: changeOrderCategoryId
+      value: ""
+      type: path
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/api/cms/Construction/LoadItemGrid/:changeOrderCategoryId"
+      method: GET
+      params:
+        - name: changeOrderCategoryId
+          value: ""
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

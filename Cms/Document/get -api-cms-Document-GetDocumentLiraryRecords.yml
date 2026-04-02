@@ -7,8 +7,10 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Document/GetDocumentLiraryRecords"
-  auth: inherit
+  url: "{{cmsUrl}}/api/cms/Document/GetDocumentLiraryRecords"
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

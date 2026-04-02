@@ -7,20 +7,22 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Document/Upload"
+  url: "{{cmsUrl}}/api/cms/Document/Upload"
   body:
     type: multipart-form
     data:
       - name: files
         type: text
-        value: ""
+        value: Document.pdf
       - name: contractNumber
         type: text
-        value: ""
+        value: SP-1151
       - name: documentGroup
         type: text
         value: ""
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

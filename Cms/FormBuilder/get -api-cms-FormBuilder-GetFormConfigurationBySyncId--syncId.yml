@@ -7,16 +7,18 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/FormBuilder/GetFormConfigurationBySyncId/:syncId"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/GetFormConfigurationBySyncId/:syncId"
   params:
-    - name: syncId
-      value: ""
-      type: path
     - name: version
       value: ""
       type: query
       disabled: true
-  auth: inherit
+    - name: syncId
+      value: ""
+      type: path
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

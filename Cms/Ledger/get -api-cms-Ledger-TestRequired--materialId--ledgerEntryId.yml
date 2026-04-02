@@ -7,13 +7,13 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Ledger/TestRequired/:materialId/:ledgerEntryId"
+  url: "{{cmsUrl}}/api/cms/Ledger/TestRequired/:materialId/:ledgerEntryId"
   params:
     - name: materialId
       value: ""
       type: path
     - name: ledgerEntryId
-      value: ""
+      value: "942936210"
       type: path
   auth: inherit
 

@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/GetConstructionSummary"
+  url: "{{cmsUrl}}/api/cms/Construction/GetConstructionSummary"
   params:
     - name: contractId
-      value: ""
+      value: "937760910"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -7,12 +7,14 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Document/deleteDocument/:documentId"
+  url: "{{cmsUrl}}/api/cms/Document/deleteDocument/:documentId"
   params:
     - name: documentId
-      value: ""
+      value: "942947510"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

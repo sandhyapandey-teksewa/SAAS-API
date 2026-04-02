@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Ledger/Entries"
+  url: "{{cmsUrl}}/api/cms/Ledger/Entries"
   body:
     type: json
     data: |-
@@ -2803,7 +2803,9 @@ http:
           "itemNumber": ""
         }
       ]
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

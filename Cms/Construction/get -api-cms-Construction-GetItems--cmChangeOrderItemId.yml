@@ -7,12 +7,14 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/GetItems/:cmChangeOrderItemId"
+  url: "{{cmsUrl}}/api/cms/Construction/GetItems/:cmChangeOrderItemId"
   params:
     - name: cmChangeOrderItemId
-      value: ""
+      value: "0"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

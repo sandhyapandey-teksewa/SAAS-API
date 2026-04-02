@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Dashboard/success"
+  url: "{{cmsUrl}}/api/cms/Dashboard/success"
   params:
     - name: message
       value: ""
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

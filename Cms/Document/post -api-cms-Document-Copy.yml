@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Document/Copy"
+  url: "{{cmsUrl}}/api/cms/Document/Copy"
   body:
     type: json
     data: |-
@@ -15,8 +15,8 @@ http:
         "smDocuments": [
           {
             "createdBy": "",
-            "createDate": "",
-            "lastUpdateDate": "",
+            "createDate": "2026-03-31T05:12:05.7103713",
+            "lastUpdateDate": "2016-12-02T14:40:16",
             "lastUpdateBy": "",
             "versionNumber": 0,
             "smDomainId": 0,
@@ -1246,7 +1246,9 @@ http:
           }
         ]
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

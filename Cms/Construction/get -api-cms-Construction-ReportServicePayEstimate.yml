@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/ReportServicePayEstimate"
+  url: "{{cmsUrl}}/api/cms/Construction/ReportServicePayEstimate"
   params:
     - name: payEstimateId
-      value: ""
+      value: "942938110"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

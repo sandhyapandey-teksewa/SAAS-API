@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/GetDailyReportActivity"
+  url: "{{cmsUrl}}/api/cms/Construction/GetDailyReportActivity"
   params:
     - name: contractId
       value: ""
@@ -19,7 +19,9 @@ http:
       [
         {}
       ]
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

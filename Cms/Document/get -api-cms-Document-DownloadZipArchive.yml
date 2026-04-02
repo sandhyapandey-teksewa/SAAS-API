@@ -7,13 +7,14 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Document/DownloadZipArchive"
+  url: "{{cmsUrl}}/api/cms/Document/DownloadZipArchive?ids=218382610408405"
   params:
     - name: ids
-      value: ""
+      value: "218382610408405"
       type: query
-      disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

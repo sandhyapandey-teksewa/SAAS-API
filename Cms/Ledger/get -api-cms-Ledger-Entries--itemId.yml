@@ -7,12 +7,14 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Ledger/Entries/:itemId"
+  url: "{{cmsUrl}}/api/cms/Ledger/Entries/:itemId"
   params:
     - name: itemId
-      value: ""
+      value: "942936410"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

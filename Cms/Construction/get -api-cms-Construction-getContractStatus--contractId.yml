@@ -7,12 +7,14 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/getContractStatus/:contractId"
+  url: "{{cmsUrl}}/api/cms/Construction/getContractStatus/:contractId"
   params:
     - name: contractId
-      value: ""
+      value: "937760910"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

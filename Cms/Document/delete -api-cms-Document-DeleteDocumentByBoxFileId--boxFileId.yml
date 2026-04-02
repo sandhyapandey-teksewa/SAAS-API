@@ -7,12 +7,14 @@ info:
 
 http:
   method: DELETE
-  url: "{{baseUrl}}/api/cms/Document/DeleteDocumentByBoxFileId/:boxFileId"
+  url: "{{cmsUrl}}/api/cms/Document/DeleteDocumentByBoxFileId/:boxFileId"
   params:
     - name: boxFileId
-      value: ""
+      value: "2182635385268"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

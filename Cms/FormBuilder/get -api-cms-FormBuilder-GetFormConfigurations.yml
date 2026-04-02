@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/FormBuilder/GetFormConfigurations"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/GetFormConfigurations"
   params:
     - name: domainId
-      value: ""
+      value: "4196416"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

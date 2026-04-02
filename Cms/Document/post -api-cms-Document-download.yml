@@ -7,11 +7,13 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Document/download"
+  url: "{{cmsUrl}}/api/cms/Document/download"
   body:
     type: json
     data: "{}"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

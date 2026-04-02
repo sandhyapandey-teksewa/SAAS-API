@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/ReportServiceItemEntry"
+  url: "{{cmsUrl}}/api/cms/Construction/ReportServiceItemEntry"
   params:
     - name: cmLedgerItemId
-      value: ""
+      value: "942936210"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

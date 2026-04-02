@@ -7,17 +7,19 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/GetDropdownItems"
+  url: "{{cmsUrl}}/api/cms/Construction/GetDropdownItems"
   params:
     - name: searchTerm
       value: ""
       type: query
       disabled: true
     - name: ebContractId
-      value: ""
+      value: "93776091"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

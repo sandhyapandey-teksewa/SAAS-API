@@ -10,9 +10,11 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/GetSubcontractChild/:id"
   params:
     - name: id
-      value: "2"
+      value: "860337610"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveItemFunding"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveItemFunding"
   params:
     - name: itemId
       value: ""
@@ -33,7 +33,9 @@ http:
           "status": ""
         }
       ]
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

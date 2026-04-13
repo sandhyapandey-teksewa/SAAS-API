@@ -16,7 +16,9 @@ http:
         "description": "Add",
         "contractId": "3214161"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

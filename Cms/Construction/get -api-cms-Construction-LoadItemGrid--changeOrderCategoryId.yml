@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/LoadItemGrid/:changeOrderCategoryId"
   params:
     - name: changeOrderCategoryId
-      value: ""
+      value: "942944110"
       type: path
   auth:
     type: bearer

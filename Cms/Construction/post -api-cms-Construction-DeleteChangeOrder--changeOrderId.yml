@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/DeleteChangeOrder/:changeOrderId"
   params:
     - name: changeOrderId
-      value: "942937410"
+      value: " 5473947"
       type: path
   auth:
     type: bearer

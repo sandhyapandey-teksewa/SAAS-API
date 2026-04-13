@@ -7,12 +7,14 @@ info:
 
 http:
   method: DELETE
-  url: "{{baseUrl}}/api/cms/FormBuilder/DeleteSubmission/:submissionId"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/DeleteSubmission/:submissionId"
   params:
     - name: submissionId
       value: ""
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

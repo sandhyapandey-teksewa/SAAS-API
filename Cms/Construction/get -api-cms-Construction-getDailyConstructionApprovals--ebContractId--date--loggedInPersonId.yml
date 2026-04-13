@@ -7,18 +7,20 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/getDailyConstructionApprovals/:ebContractId/:date/:loggedInPersonId"
+  url: "{{cmsUrl}}/api/cms/Construction/getDailyConstructionApprovals/:ebContractId/:date/:loggedInPersonId"
   params:
     - name: ebContractId
-      value: ""
+      value: "3550203"
       type: path
     - name: date
-      value: ""
+      value: 2021-07-21T22:41:51.9126534
       type: path
     - name: loggedInPersonId
-      value: ""
+      value: "0"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

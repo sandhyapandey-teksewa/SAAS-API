@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/GetChangeOrderCategory/:cmChangeOrderCategoryId"
   params:
     - name: cmChangeOrderCategoryId
-      value: "4196416"
+      value: "5473950"
       type: path
   auth:
     type: bearer

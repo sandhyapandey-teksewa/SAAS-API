@@ -7,7 +7,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/FormBuilder/GetTableColumns"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/GetTableColumns"
   params:
     - name: tableName
       value: ""
@@ -21,10 +21,9 @@ http:
       value: ""
       type: query
       disabled: true
-    - name: excludeMapped
-      value: "false"
-      type: query
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

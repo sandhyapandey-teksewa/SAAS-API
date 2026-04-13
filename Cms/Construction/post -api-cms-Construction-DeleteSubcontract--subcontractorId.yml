@@ -12,7 +12,9 @@ http:
     - name: subcontractorId
       value: ""
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

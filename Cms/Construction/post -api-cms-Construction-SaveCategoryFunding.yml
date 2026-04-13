@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveCategoryFunding"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveCategoryFunding"
   params:
     - name: cmLedgerCategoryId
       value: ""
@@ -39,7 +39,9 @@ http:
           "tertiaryFundOption": {}
         }
       ]
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

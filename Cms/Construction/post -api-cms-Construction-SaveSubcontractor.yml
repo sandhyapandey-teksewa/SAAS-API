@@ -35,7 +35,9 @@ http:
           "isCompleted": false
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

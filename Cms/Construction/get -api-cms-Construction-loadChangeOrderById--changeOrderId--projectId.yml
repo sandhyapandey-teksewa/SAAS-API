@@ -10,10 +10,10 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/loadChangeOrderById/:changeOrderId/:projectId"
   params:
     - name: changeOrderId
-      value: "942937410"
+      value: " 5473947"
       type: path
     - name: projectId
-      value: "942932410"
+      value: "3184920"
       type: path
   auth:
     type: bearer

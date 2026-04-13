@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/FormBuilder/GetAvailableVariables"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/GetAvailableVariables"
   params:
     - name: formPath
       value: ""
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveDailyReportSummary"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveDailyReportSummary"
   body:
     type: json
     data: |-
@@ -76,7 +76,9 @@ http:
         "isFromDailyReprortTab": false,
         "userTimeZone": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

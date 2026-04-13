@@ -7,10 +7,10 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveDailyReportActivityData"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveDailyReportActivityData"
   params:
     - name: date
-      value: ""
+      value: 2021-08-05T01:59:00.3178117
       type: query
       disabled: true
   body:
@@ -150,7 +150,9 @@ http:
         "contractId": 0,
         "selectedDate": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

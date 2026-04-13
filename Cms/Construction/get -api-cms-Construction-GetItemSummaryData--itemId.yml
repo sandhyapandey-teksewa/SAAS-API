@@ -10,9 +10,11 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/GetItemSummaryData/:itemId"
   params:
     - name: itemId
-      value: ""
+      value: "5473956"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -17,7 +17,9 @@ http:
         "tableName": "",
         "columnName": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

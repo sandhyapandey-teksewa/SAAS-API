@@ -7,17 +7,19 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/ChangeOrderComplete"
+  url: "{{cmsUrl}}/api/cms/Construction/ChangeOrderComplete"
   params:
     - name: isCompletedIndChecked
-      value: ""
+      value: "false"
       type: query
       disabled: true
     - name: changeOrderId
-      value: ""
+      value: "5478827"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

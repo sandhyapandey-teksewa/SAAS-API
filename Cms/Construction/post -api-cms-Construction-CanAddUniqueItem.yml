@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/CanAddUniqueItem"
+  url: "{{cmsUrl}}/api/cms/Construction/CanAddUniqueItem"
   body:
     type: json
     data: |-
@@ -21,7 +21,9 @@ http:
         "uomValue": "",
         "uomValueShort": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

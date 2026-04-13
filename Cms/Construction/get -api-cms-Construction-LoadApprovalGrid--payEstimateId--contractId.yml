@@ -7,15 +7,17 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/LoadApprovalGrid/:payEstimateId/:contractId"
+  url: "{{cmsUrl}}/api/cms/Construction/LoadApprovalGrid/:payEstimateId/:contractId"
   params:
     - name: payEstimateId
-      value: ""
+      value: "942938110"
       type: path
     - name: contractId
-      value: ""
+      value: "942932310"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

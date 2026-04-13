@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/LoadLedgerItems/:cmChangeOrderCategoryId"
   params:
     - name: cmChangeOrderCategoryId
-      value: ""
+      value: "5473950"
       type: path
   auth:
     type: bearer

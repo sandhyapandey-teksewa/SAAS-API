@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveDailyReportApprovalData"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveDailyReportApprovalData"
   params:
     - name: date
       value: ""
@@ -34,7 +34,9 @@ http:
         "contractId": 0,
         "selectedDate": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

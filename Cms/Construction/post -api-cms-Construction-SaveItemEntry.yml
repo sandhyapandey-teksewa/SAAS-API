@@ -159,7 +159,9 @@ http:
         ],
         "contractId": 0
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

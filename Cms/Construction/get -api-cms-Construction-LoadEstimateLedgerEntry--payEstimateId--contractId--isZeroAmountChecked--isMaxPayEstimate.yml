@@ -10,10 +10,10 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/LoadEstimateLedgerEntry/:payEstimateId/:contractId/:isZeroAmountChecked/:isMaxPayEstimate"
   params:
     - name: payEstimateId
-      value: "0"
+      value: "942937710"
       type: path
     - name: contractId
-      value: "0"
+      value: "942932310"
       type: path
     - name: isZeroAmountChecked
       value: "false"

@@ -7,20 +7,22 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveCurrentCategory"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveCurrentCategory"
   body:
     type: json
     data: |-
       {
-        "cmChangeOrderId": 0,
+        "cmChangeOrderId": 5473947,
         "list": [
           {
-            "name": "",
-            "value": 0
+            "name": "PIKE INSDUSTRIES INC",
+            "value": "ARCH"
           }
         ]
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

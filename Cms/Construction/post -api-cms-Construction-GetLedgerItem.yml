@@ -12,8 +12,8 @@ http:
     type: json
     data: |-
       {
-        "smStandardItemId": 0,
-        "ebContractId": 942932310
+        "smStandardItemId":1558349,
+        "ebContractId": 3550203
       }
   auth:
     type: bearer

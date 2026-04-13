@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/GetApprovals/:changeOrderId"
   params:
     - name: changeOrderId
-      value: "942941410"
+      value: "5478827"
       type: path
   auth:
     type: bearer

@@ -7,12 +7,14 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/SaveChangeOrderCategory/:changeOrderId"
+  url: "{{cmsUrl}}/api/cms/Construction/SaveChangeOrderCategory/:changeOrderId"
   params:
     - name: changeOrderId
-      value: ""
+      value: "5478827"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

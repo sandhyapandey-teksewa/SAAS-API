@@ -10,15 +10,15 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/LedgerEntryPayment"
   params:
     - name: cmLedgerEntryId
-      value: ""
+      value: "942937910"
       type: query
       disabled: true
     - name: cmPayEstimateId
-      value: ""
+      value: "942938110"
       type: query
       disabled: true
     - name: payInd
-      value: ""
+      value: "false"
       type: query
       disabled: true
   auth:

@@ -8,7 +8,9 @@ info:
 http:
   method: GET
   url: "{{cmsUrl}}/api/cms/Construction/GetSubcontractorList"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

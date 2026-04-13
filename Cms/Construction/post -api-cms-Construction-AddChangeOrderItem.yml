@@ -7,13 +7,13 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/AddChangeOrderItem"
+  url: "{{cmsUrl}}/api/cms/Construction/AddChangeOrderItem"
   body:
     type: json
     data: |-
       {
         "description": "",
-        "ebContractId": 0,
+        "ebContractId": 3550203,
         "itemNum": "",
         "cmChangeOrderCategoryId": 0,
         "uomItemTypeCd": 0,
@@ -23,7 +23,9 @@ http:
         },
         "uomValueShort": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

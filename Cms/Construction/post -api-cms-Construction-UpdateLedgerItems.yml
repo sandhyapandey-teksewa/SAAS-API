@@ -7,20 +7,22 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/UpdateLedgerItems"
+  url: "{{cmsUrl}}/api/cms/Construction/UpdateLedgerItems"
   body:
     type: json
     data: |-
       {
-        "cmPayEstimateId": 0,
+        "cmPayEstimateId": 942937710,
         "retainage": 0,
-        "closingDate": "",
+        "closingDate": "03/24/2026",
         "ledgerEntryId": 0,
         "payIndicator": false,
         "ledgerEntryComment": "",
         "isZeroAmountChecked": false
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

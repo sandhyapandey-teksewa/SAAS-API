@@ -7,11 +7,13 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/CloseContract"
+  url: "{{cmsUrl}}/api/cms/Construction/CloseContract"
   body:
     type: json
     data: "{}"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

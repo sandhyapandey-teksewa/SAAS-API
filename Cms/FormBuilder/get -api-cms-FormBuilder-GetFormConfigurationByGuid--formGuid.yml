@@ -7,16 +7,18 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/FormBuilder/GetFormConfigurationByGuid/:formGuid"
+  url: "{{cmsUrl}}/api/cms/FormBuilder/GetFormConfigurationByGuid/:formGuid"
   params:
-    - name: formGuid
-      value: ""
-      type: path
     - name: version
       value: ""
       type: query
       disabled: true
-  auth: inherit
+    - name: formGuid
+      value: ""
+      type: path
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

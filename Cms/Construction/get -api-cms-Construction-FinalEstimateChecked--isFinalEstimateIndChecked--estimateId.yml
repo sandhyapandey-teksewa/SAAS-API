@@ -7,15 +7,17 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/FinalEstimateChecked/:isFinalEstimateIndChecked/:estimateId"
+  url: "{{cmsUrl}}/api/cms/Construction/FinalEstimateChecked/:isFinalEstimateIndChecked/:estimateId"
   params:
     - name: isFinalEstimateIndChecked
       value: ""
       type: path
     - name: estimateId
-      value: ""
+      value: "942932310"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

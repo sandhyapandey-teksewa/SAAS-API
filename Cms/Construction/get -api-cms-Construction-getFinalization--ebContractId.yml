@@ -10,9 +10,11 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/getFinalization/:ebContractId"
   params:
     - name: ebContractId
-      value: ""
+      value: "3550203"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

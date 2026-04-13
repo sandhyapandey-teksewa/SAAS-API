@@ -7,15 +7,17 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/getDailyConstructionApprovalsListBox/:ebContractId/:selectedDate"
+  url: "{{cmsUrl}}/api/cms/Construction/getDailyConstructionApprovalsListBox/:ebContractId/:selectedDate"
   params:
     - name: ebContractId
-      value: ""
+      value: "3550203"
       type: path
     - name: selectedDate
-      value: ""
+      value: 2021-07-21T22:41:51.9126534
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

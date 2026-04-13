@@ -7,12 +7,14 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/AddNewChangeOrder/:projectId"
+  url: "{{cmsUrl}}/api/cms/Construction/AddNewChangeOrder/:projectId"
   params:
     - name: projectId
-      value: ""
+      value: "3184920"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

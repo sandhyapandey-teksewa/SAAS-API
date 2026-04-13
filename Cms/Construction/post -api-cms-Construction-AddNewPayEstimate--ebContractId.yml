@@ -7,12 +7,14 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/AddNewPayEstimate/:ebContractId"
+  url: "{{cmsUrl}}/api/cms/Construction/AddNewPayEstimate/:ebContractId"
   params:
     - name: ebContractId
-      value: ""
+      value: "3550203"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/LoadChangeOrderCategoryWorkTypeDDL/:tempChangeOrderCategoryId"
   params:
     - name: tempChangeOrderCategoryId
-      value: ""
+      value: "942997910"
       type: path
   auth:
     type: bearer

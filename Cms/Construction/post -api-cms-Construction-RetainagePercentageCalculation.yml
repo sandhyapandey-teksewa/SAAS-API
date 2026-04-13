@@ -7,10 +7,10 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/RetainagePercentageCalculation"
+  url: "{{cmsUrl}}/api/cms/Construction/RetainagePercentageCalculation"
   params:
     - name: estimateId
-      value: ""
+      value: "942937710"
       type: query
       disabled: true
     - name: retainage
@@ -18,10 +18,12 @@ http:
       type: query
       disabled: true
     - name: closingDate
-      value: ""
+      value: 03/24/2026
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

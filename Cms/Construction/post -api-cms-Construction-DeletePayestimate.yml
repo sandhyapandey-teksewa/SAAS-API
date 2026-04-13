@@ -10,7 +10,7 @@ http:
   url: "{{cmsUrl}}/api/cms/Construction/DeletePayestimate"
   params:
     - name: estimateId
-      value: "0"
+      value: "942937710"
       type: query
       disabled: true
   auth:

@@ -7,12 +7,14 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/AddUpdatePayEstimateApproval/:payEstimateApprovalId"
+  url: "{{cmsUrl}}/api/cms/Construction/AddUpdatePayEstimateApproval/:payEstimateApprovalId"
   params:
     - name: payEstimateApprovalId
-      value: ""
+      value: "942938110"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

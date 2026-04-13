@@ -15,7 +15,9 @@ http:
         "subcontractId": 0,
         "text": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

@@ -7,13 +7,15 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/cms/Construction/GetUniqueRoleDescriptions"
+  url: "{{cmsUrl}}/api/cms/Construction/GetUniqueRoleDescriptions"
   params:
     - name: personId
-      value: ""
+      value: "0"
       type: query
       disabled: true
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true

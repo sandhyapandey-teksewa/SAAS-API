@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/cms/Construction/UpdatePayEstimate"
+  url: "{{cmsUrl}}/api/cms/Construction/UpdatePayEstimate"
   body:
     type: json
     data: |-
@@ -93,7 +93,9 @@ http:
         ],
         "closingDateUser": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{bearerToken}}"
 
 settings:
   encodeUrl: true
